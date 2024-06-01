@@ -1,0 +1,866 @@
+[
+  {
+    "Soru": "Üniversitenin Kampüsleri nerede?",
+    "Cevap": "Ondokuz Mayıs Üniversitesinde 4 farklı yerleşke bulunmaktadır. Ana kampüsümüz Atakum'da bulunan Kurupelit Yerleşkesi'dir. Diğer kampüsler hakkında detaylı bilgi için https://www.omu.edu.tr/tr/universitemiz/yerleskeler adresini ziyaret edebilirsiniz."
+  },
+  {
+    "Soru": "Üniversite ne zaman kuruldu?",
+    "Cevap": "Ondokuz Mayıs Üniversitesi, 1 Nisan 1975 tarihinde 1873 sayılı Kanun'la kurulmuş ve ilk olarak 50 öğrenci ile eğitim-öğretime başlamıştır."
+  },
+  {
+    "Soru": "Üniversitemizde Uluslararası öğrenci sayısı kaçtır?",
+    "Cevap": "Uluslararasılaşma konusunda büyük bir gayret gösteren üniversitemiz, 111 ülkeden 5510 uluslararası öğrenci sayısı ile Türkiye’deki tüm üniversiteler arasında en çok sayıda uluslararası öğrencisi olan ilk 5 üniversiteden biri olarak uluslararası bir üniversite olma yolunda emin adımlarla ilerlemektedir."
+  },
+  {
+    "Soru": "Üniversitemizde kaç yabancı öğrenci bulunmaktadır?",
+    "Cevap": "Uluslararasılaşma konusunda büyük bir gayret gösteren üniversitemiz, 111 ülkeden 5510 uluslararası öğrenci sayısı ile Türkiye’deki tüm üniversiteler arasında en çok sayıda uluslararası öğrencisi olan ilk 5 üniversiteden biri olarak uluslararası bir üniversite olma yolunda emin adımlarla ilerlemektedir."
+  },
+  {
+    "Soru": "Üniversitemiz dünyada kaçıncı sıradadır?",
+    "Cevap": "Ondokuz Mayıs Üniversitesi, dünyada 11 bin 989 üniversitenin değerlendirildiği sıralamada 2022 yılında 1617'nci sıradayken, 2023 yılında 173 basamak yükselerek 1444'üncü oldu. Avrupa kıtasında ise 6 bin üniversite arasında 544'üncü sırada yer aldı."
+  },
+  {
+    "Soru": "Üniversitemiz Türkiyede kaçıncı sıradadır?",
+    "Cevap": "İspanya'nın en büyük kamu araştırma kuruluşu olan Consejo Superior de Investigaciones Científicas'un (CSIC) oluşturduğu \"Webometrics Ranking of World Universities\" (Dünya Üniversitelerinin Webometrics Sıralaması) sonuçlarına göre ülkemizden 209 üniversitenin dâhil edildiği derecelendirme sisteminde, Ondokuz Mayıs Üniversitesi Türkiye'nin en başarılı 21'inci üniversitesi olurken, etki açısından ise en başarılı 18'inci üniversitesi seçildi."
+  },
+  {
+    "Soru": "Eğitim fakültesi ne zaman kurulmuştur ?",
+    "Cevap": "Ondokuz Mayıs Üniversitesinin en köklü fakültelerinden biri olan Eğitim Fakültesi'nin temelleri 1961 yılında atılmıştır."
+  },
+  {
+    "Soru": "Üniversitede kaç kampüs var?",
+    "Cevap": "Ondokuz Mayıs Üniversitesinde 4 farklı yerleşke bulunmaktadır. Ana kampüsümüz Atakum'da bulunan Kurupelit Yerleşkesi'dir. Diğer kampüsler hakkında detaylı bilgi için https://www.omu.edu.tr/tr/universitemiz/yerleskeler adresini ziyaret edebilirsiniz."
+  },
+  {
+    "Soru": "Üniversitenin ana yerleşkesi neresi?",
+    "Cevap": "Ondokuz Mayıs Üniversitesinde 4 farklı yerleşke bulunmaktadır. Ana kampüsümüz Atakum'da bulunan Kurupelit Yerleşkesi'dir. Diğer kampüsler hakkında detaylı bilgi için https://www.omu.edu.tr/tr/universitemiz/yerleskeler adresini ziyaret edebilirsiniz."
+  },
+  {
+    "Soru": "Üniversitede kaç öğrenci var?",
+    "Cevap": "Üniversitemize kayıtlı yaklaşık 53000 öğrenci bulunmaktadır."
+  },
+  {
+    "Soru": "Üniversite yönetim kurulu üyeleri kimlerdir ?",
+    "Cevap": "https://www.omu.edu.tr/tr/yonetim/yonetim-kurulu Adresinden yönetim kurulu kadrosu hakkında bilgi sahibi olabilirsiniz."
+  },
+  {
+    "Soru": "Üniversite Rektör yardımcıları kimlerdir ?",
+    "Cevap": "Ondokuz Mayıs Üniversitesi rektör yardımcıları Prof. Dr. Selim EREN, Prof. Dr. Sevim ALIŞIR ve Prof. Dr. Murat TERZİ'dir."
+  },
+  {
+    "Soru": "Üniversite Rektörü kim ?",
+    "Cevap": "Ondokuz Mayıs Üniversitesi rektörü Prof. Dr. Yavuz ÜNAL'dır."
+  },
+  {
+    "Soru": "Üniversite Rektör danışmanları kimlerdir ?",
+    "Cevap": "Ondokuz Mayıs Üniversitesi rektör danışmanları Prof. Dr. Yavuz BAYRAM, Prof. Dr. Ramazan ÇAĞLAYAN, Prof. Dr. Nalan KIZILTAN, Prof. Dr. Zeliha KOÇ, Doç. Dr. Gökhan DEMİR ve Doç. Dr. Şener ŞENTÜRK'tür."
+  },
+  {
+    "Soru": "Üniversitede Senato kimlerden oluşmaktadır ?",
+    "Cevap": "https://www.omu.edu.tr/tr/yonetim/senato Adresinden senato kadrosu hakkında bilgi edinebilirsiniz."
+  },
+  {
+    "Soru": "Hazırlık dersleri hangi kampüste, nerede veriliyor?",
+    "Cevap": "Üniversitemizde hazırlık öğrencilerinin dersleri İktisadi ve İdari Bilimler Fakültesinde Yabancı Diller Yüksekokulu binasında verilmektedir."
+  },
+  {
+    "Soru": "En yüksek puanlı bölüm hangisi?",
+    "Cevap": "2022 Yılı yerleştirmelerine göre en yüksek puanlı öğrencilerin girdiği bölüm Tıp(6 yıllık) bölümüdür."
+  },
+  {
+    "Soru": "Omü kampüsü kaç dönüm?",
+    "Cevap": "Ana yerleşke olan Kurupelit Yerleşkesi 8800 dönümlük bir alana sahiptir."
+  },
+  {
+    "Soru": "Öğle arası kaç saat sürüyor ?",
+    "Cevap": "12.00 - 13.00 saatleri arası üniversite genelinde öğle arası olmaktadır."
+  },
+  {
+    "Soru": "Öğrenci işlerinin öğle arası ne zaman?",
+    "Cevap": "12.00 - 13.00 saatleri arası üniversite genelinde öğle arası olmaktadır."
+  },
+  {
+    "Soru": "Okulda öğrencilerin de park yapabileceği bir otopark var mı?",
+    "Cevap": "Fakültelerin önlerinde öğrencilerin de park yapabileceği otoparklar bulunmaktadır. https://www.omu.edu.tr/tr/haritalar?h=park Adresinden otoparkların konumu hakkında bilgi sahibi olabilirsiniz."
+  },
+  {
+    "Soru": "Kampüste kaç adet atm var?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=atm Adresinden kampüsteki ATM'ler ver konumları hakkında bilgi sahibi olabilirsiniz."
+  },
+  {
+    "Soru": "Kampüste nereden para çekebilirim ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=atm Adresinden kampüsteki ATM'ler ver konumları hakkında bilgi sahibi olabilirsiniz."
+  },
+  {
+    "Soru": "Üniversitenin idari birimleri nerede?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=idari Adresinden üniversitemizin idari birimler ve konumları hakkında bilgi sahibi olabilirsiniz."
+  },
+  {
+    "Soru": "Üniversitenin öğrenci işleri daire başkanlığı nerededir ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=oidb Adresinden üniversitenin öğrenci işleri daire başkanlığının konumunu bulabilirsiniz."
+  },
+  {
+    "Soru": "Öğrenci işleri ile işim var binası nerede ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=oidb Adresinden üniversitenin öğrenci işleri daire başkanlığının konumunu bulabilirsiniz."
+  },
+  {
+    "Soru": "Kampüste kablosuz ağ alanları bulunmakta mı ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=ag Adresinden kampüslerdeki kablosuz ağ alanlarının konumları hakkında bilgi edinebilirsiniz."
+  },
+  {
+    "Soru": "Wifi alanları bulunuyor mu ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=ag Adresinden kampüslerdeki kablosuz ağ alanlarının konumları hakkında bilgi edinebilirsiniz."
+  },
+  {
+    "Soru": "Uluslararası öğrenci kayıt merkezi nerede ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=yos Adresinden uluslararası öğrenci kayıt merkezinin konumunu bulabilirsiniz."
+  },
+  {
+    "Soru": "Kampüste cami nerede ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=diger Adresinden Ondokuz Mayıs Üniversitesi Cami konumu hakkında bilgi edinebilirsiniz."
+  },
+  {
+    "Soru": "Üniversitede cami bulunuyor mu ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=diger Adresinden Ondokuz Mayıs Üniversitesi Cami konumu hakkında bilgi edinebilirsiniz."
+  },
+  {
+    "Soru": "OMÜ Atatürk Kongre ve Kültür Merkezi nerededir ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=konferans Adresinden Atatürk Kongre ve Kültür Merkezinin konumunu bulabilirsiniz."
+  },
+  {
+    "Soru": "Üniversitede büyük bir konferans salonu var mı?",
+    "Cevap": "Kurupelit kampüsünde Atatürk Kongre ve Kültür Merkezi adında büyük bir konferans salonu bulunmaktadır."
+  },
+  {
+    "Soru": "Üniversitede Kütüphane var mı ?",
+    "Cevap": "Kurupelit kampüsünde OMÜ Merkez Kütüphanesi adında büyük bir kütüphane bulunmaktadır."
+  },
+  {
+    "Soru": "Kütüphane nerede?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=kutuphane Adresinden OMÜ Merkez Kütüphanesinin konumu hakkında bilgi edinebilirsiniz."
+  },
+  {
+    "Soru": "Kampüste kaç tane yurt var ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=binalar Adresinden kampüs içerisindeki yurtlar ve konumları hakkında bilgi edinebilirsiniz ."
+  },
+  {
+    "Soru": "Kampüsün içinde yurt var mı ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=binalar Adresinden kampüs içerisindeki yurtlar ve konumları hakkında bilgi edinebilirsiniz ."
+  },
+  {
+    "Soru": "Kampüsteki yurtlar nerede ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=binalar Adresinden kampüs içerisindeki yurtlar ve konumları hakkında bilgi edinebilirsiniz ."
+  },
+  {
+    "Soru": "Üniversitede kaç adet laboratuvar var?",
+    "Cevap": "Ondokuz Mayıs Üniversitesinde yaklaşık 255 laboratuvar bulunmaktadır. https://labsis.omu.edu.tr/labs adresinde üniversitemizdeki laboratuvarlar ve içerdikleri cihazların listesi bulunmaktadır. Bu listeyi inceleyip laboratuvarlar hakkında bilgi sahibi olabilirsiniz."
+  },
+  {
+    "Soru": "Laboratuvar ortamı yeterli mi?",
+    "Cevap": "Ondokuz Mayıs Üniversitesinde yaklaşık 255 laboratuvar bulunmaktadır. https://labsis.omu.edu.tr/labs adresinde üniversitemizdeki laboratuvarlar ve içerdikleri cihazların listesi bulunmaktadır. Bu listeyi inceleyip laboratuvarlar hakkında bilgi sahibi olabilirsiniz."
+  },
+  {
+    "Soru": "Okulda bilgisayar laboratuarı var mı ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=laboratuvar Adresinden bilgisayar laboratuvarlarının konumu hakkında bilgi edinebilirsiniz."
+  },
+  {
+    "Soru": "Elektrik Mühendisliği bölümü dersleri nerede işliyor.?",
+    "Cevap": "Üniversitemizin Mühendislik bölümü öğrencileri Kurupelit Yerleşkesindeki Mühendislik Fakültesinde derslerini görmektedir."
+  },
+  {
+    "Soru": "Bilgisayar Mühendisliği nerede?",
+    "Cevap": "Üniversitemizin Mühendislik bölümü öğrencileri Kurupelit Yerleşkesindeki Mühendislik Fakültesinde derslerini görmektedir."
+  },
+  {
+    "Soru": "Makine mühendisliği hangi kampüste ?",
+    "Cevap": "Üniversitemizin Mühendislik bölümü öğrencileri Kurupelit Yerleşkesindeki Mühendislik Fakültesinde derslerini görmektedir."
+  },
+  {
+    "Soru": "Üniversitelerde en çok tercih edilen bölüm nedir?",
+    "Cevap": "Üniversitemizde Tıp, Diş Hekimliği, Mühendislik ve Eğitim fakültelerine yoğun ilgi bulunmaktadır."
+  },
+  {
+    "Soru": "Kampüs içi ringler ücretli mi?",
+    "Cevap": "Kampüs içi ringler bulunmamaktadır. Kampüs içerisinde belediye otobüsleri ile ulaşım sağlanmaktadır. Belediye otobüsleri ücretlidir."
+  },
+  {
+    "Soru": "Kampüse ulaşım nasıl?",
+    "Cevap": "Kurupelit kampüsü ulaşım açısından avantajlı bir yerdir. Kampüse ulaşım için raylı sistem, belediye otobüsü ve dolmuş seçeneklerini kullanabilirsiniz."
+  },
+  {
+    "Soru": "Okula nasıl giderim?",
+    "Cevap": "Kurupelit kampüsü ulaşım açısından avantajlı bir yerdir. Kampüse ulaşım için raylı sistem, belediye otobüsü ve dolmuş seçeneklerini kullanabilirsiniz."
+  },
+  {
+    "Soru": "Üniversiteye hangi ulaşım yolları ile giderim?",
+    "Cevap": "Kurupelit kampüsü ulaşım açısından avantajlı bir yerdir. Kampüse ulaşım için raylı sistem, belediye otobüsü ve dolmuş seçeneklerini kullanabilirsiniz."
+  },
+  {
+    "Soru": "OMÜ Kurupelit kampüsüne nasıl giderim?",
+    "Cevap": "Kurupelit kampüsü ulaşım açısından avantajlı bir yerdir. Kampüse ulaşım için raylı sistem, belediye otobüsü ve dolmuş seçeneklerini kullanabilirsiniz."
+  },
+  {
+    "Soru": "Kampüste nereden çıktı alabilirim?",
+    "Cevap": "Yaşam merkezinde öğrencilerin belli bir ücret karşılığında çıktı alabilecekleri yerler mevcuttur."
+  },
+  {
+    "Soru": "Hangi Takımlısın",
+    "Cevap": "Çaykur Rizespor"
+  },
+  {
+    "Soru": "Kampüste kırtasiye var mı?",
+    "Cevap": "Kurupelit kampüsündeki yaşam merkezinde bir kırtasiye bulunmaktadır."
+  },
+  {
+    "Soru": "Kampüsteki şikayetlerimi nereye iletmeliyim?",
+    "Cevap": "Ondokuz Mayıs Üniversitesi ile ilgili şikayetlerinizi 0 (362) 312 19 40 nolu öğrenci danışma hattına iletebilirsiniz."
+  },
+  {
+    "Soru": "Üniversitenin kampüsü hakkında görüşleriniz nelerdir?",
+    "Cevap": "Büyük, doğayla iç içe ve güzel bi kampüse sahip olduğumuzu düşünüyorum."
+  },
+  {
+    "Soru": "Üniversitede spor yapabileceğim yerler var mı?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=sporalanlari Adresinden kampüslerimizdeki spor alanları ve konumları hakkında bilgi edinebilirsiniz."
+  },
+  {
+    "Soru": "Kampüste spor salonu var mı?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=sporalanlari Adresinden kampüslerimizdeki spor alanları ve konumları hakkında bilgi edinebilirsiniz."
+  },
+  {
+    "Soru": "Üniversitede spor alanları bulunuyor mu ?",
+    "Cevap": "https://www.omu.edu.tr/tr/haritalar?h=sporalanlari Adresinden kampüslerimizdeki spor alanları ve konumları hakkında bilgi edinebilirsiniz."
+  },
+  {
+    "Soru": "Okula giden otobüsler ne sıklıkla kalkıyor?",
+    "Cevap": "Okula giden otobüsler her 15 dakikada bir , tramvaylar ise 10 dakikada bir kalkmaktadır."
+  },
+  {
+    "Soru": "Yemekhane var mı?",
+    "Cevap": "Kampüs içinde 6 adet yemekhane-kantin bulunmaktadır. https://www.omu.edu.tr/tr/haritalar?h=yemekhane sitesinden bu yemekhanelerin konumlarına bakabilirsiniz. Ayrıca bunlara ek olarak yaşam merkezinde de yemek yiyebileceğiniz yerler mevcuttur."
+  },
+  {
+    "Soru": "Kampüste restoran var mı?",
+    "Cevap": "Kampüs içinde 6 adet yemekhane-kantin bulunmaktadır. https://www.omu.edu.tr/tr/haritalar?h=yemekhane sitesinden bu yemekhanelerin konumlarına bakabilirsiniz. Ayrıca bunlara ek olarak yaşam merkezinde de yemek yiyebileceğiniz yerler mevcuttur."
+  },
+  {
+    "Soru": "Kampüste market veya cafe var mı?",
+    "Cevap": "Kampüs içinde 6 adet yemekhane-kantin bulunmaktadır. https://www.omu.edu.tr/tr/haritalar?h=yemekhane sitesinden bu yemekhanelerin konumlarına bakabilirsiniz. Ayrıca bunlara ek olarak yaşam merkezinde de yemek yiyebileceğiniz yerler mevcuttur."
+  },
+  {
+    "Soru": "Okulda kaç tane kafe var?",
+    "Cevap": "Kampüs içinde 6 adet yemekhane-kantin bulunmaktadır. https://www.omu.edu.tr/tr/haritalar?h=yemekhane sitesinden bu yemekhanelerin konumlarına bakabilirsiniz. Ayrıca bunlara ek olarak yaşam merkezinde de yemek yiyebileceğiniz yerler mevcuttur."
+  },
+  {
+    "Soru": "Okulda kantin var mı?",
+    "Cevap": "Üniversitemize her fakültenin kafeteryası bulunmaktadır."
+  },
+  {
+    "Soru": "Okul saat kaçta açılıyor?",
+    "Cevap": "Samsun Valiliğinin aldığı karar ile üniversitemizin mesai saatleri 08.00-17.00 olarak belirlenmiştir."
+  },
+  {
+    "Soru": "Fakülteler saat kaçta kapanıyor ?",
+    "Cevap": "Samsun Valiliğinin aldığı karar ile üniversitemizin mesai saatleri 08.00-17.00 olarak belirlenmiştir."
+  },
+  {
+    "Soru": "Kütüphane saat kaça kadar açık ?",
+    "Cevap": "Kütüphanemiz hafta içleri saat 08:00 – 21:00 aralığında, hafta sonları 09:00 – 16:30 saatleri aralığında açıktır. Sınav zamanı kütüphaneler 24 saat açıktır."
+  },
+  {
+    "Soru": "Kütüphane 24 saat açık mı?",
+    "Cevap": "Kütüphanemiz hafta içleri saat 08:00 – 21:00 aralığında, hafta sonları 09:00 – 16:30 saatleri aralığında açıktır. Sınav zamanı kütüphaneler 24 saat açıktır."
+  },
+  {
+    "Soru": "Kütüphane ne zamana kadar açık ?",
+    "Cevap": "Kütüphanemiz hafta içleri saat 08:00 – 21:00 aralığında, hafta sonları 09:00 – 16:30 saatleri aralığında açıktır. Sınav zamanı kütüphaneler 24 saat açıktır."
+  },
+  {
+    "Soru": "Kütüphanede hangi kitaplar var?",
+    "Cevap": "http://libra.omu.edu.tr/ adresi üzerinden kitap sorgulaması yapıp aradığınız kitapların yerlerini öğrenebilirsiniz."
+  },
+  {
+    "Soru": "Kütüphanede aradığım kitabı kolayca nasıl bulabilirim?",
+    "Cevap": "http://libra.omu.edu.tr/ adresi üzerinden kitap sorgulaması yapıp aradığınız kitapların yerlerini öğrenebilirsiniz."
+  },
+  {
+    "Soru": "Üniversitenin kütüphanesi her bölümün faydalanabileceği ölçüde yeterli midir ?",
+    "Cevap": "http://libra.omu.edu.tr/ adresi üzerinden kitap sorgulaması yapıp kütüphanenin kitap yeterliliği hakkında bilgi sahibi olabilirsiniz."
+  },
+  {
+    "Soru": "Fakültelerde ecza dolabı bulunuyor mu?",
+    "Cevap": "Fakültelerimizde ecza dolapları bulunmaktadır."
+  },
+  {
+    "Soru": "Bana kütüphaneden bir kitap tavsiyesi verebilir misin?",
+    "Cevap": "Kütüphanemizdeki bütün kitaplar özenle seçilmiştir. Bütün kitapları okuyabilirsiniz. Yine de Yabancı(L'Étranger), Körlük (Blindness), Küçük Prens(Le Petit Prince) sıkça önerilen kitaplar arasındadır."
+  },
+  {
+    "Soru": "Kampüsten son tramvay kaçta geçiyor",
+    "Cevap": "Samulaş'ın sitesindeki bilgilere göre hafta içi son tramvay 23:45 de kalkmaktadır."
+  },
+  {
+    "Soru": "Farklı fakülte öğrencileriyle vakit geçirebileceğim yerler nerelerdir?",
+    "Cevap": "Kampüsümüzde bir adet yaşam merkezi bulunmaktadır. Burada tüm fakültelerden öğrenciler toplanır. Eğer yaşam merkezine uğrarsanız farklı fakülteden insanlar ile vakit geçirebilirsiniz."
+  },
+  {
+    "Soru": "Öğrenci yemekhanesinin ücreti ne kadar?",
+    "Cevap": "Üniversitemizdeki öğrenciler için güncel yemekhane ücreti 20 TL'dir."
+  },
+  {
+    "Soru": "Yemekhanede bir öğün kaç lira?",
+    "Cevap": "Üniversitemizdeki öğrenciler için güncel yemekhane ücreti 20 TL'dir."
+  },
+  {
+    "Soru": "Yemekhanede kaç öğün yemek çıkıyor?",
+    "Cevap": "Üniversitemizdeki yemekhanelerde öğlen ve akşam olmak üzere 2 öğün yemek çıkmaktadır."
+  },
+  {
+    "Soru": "Yemekhane ürün çeşitliliği ne kadar?",
+    "Cevap": "Yemekhanelerimizde her öğün için 4 çeşit yemek çıkmaktadır."
+  },
+  {
+    "Soru": "Hazırlık sınavını geçme notu nedir?",
+    "Cevap": "Hazırlık muafiyet sınavında geçme notu üniversite genelinde de olduğu gibi 60 puan olarak belirlenmiştir."
+  },
+  {
+    "Soru": "Derslerde devam zorunluluğu var mı",
+    "Cevap": "Üniversitemizde %70 derslere devam zorunluluğu bulunmaktadır."
+  },
+  {
+    "Soru": "Okulda devam zorunluluğu var mı?",
+    "Cevap": "Üniversitemizde %70 derslere devam zorunluluğu bulunmaktadır."
+  },
+  {
+    "Soru": "Devamsızlık ne kadar?",
+    "Cevap": "Üniversitemizde %70 derslere devam zorunluluğu bulunmaktadır."
+  },
+  {
+    "Soru": "Okulda teknopark bulunuyor mu?",
+    "Cevap": "Üniversitemizde 1 adet teknopark bulunmaktadır. Detaylı bilgi için https://www.samsunteknopark.com/ adresini ziyaret edebilirsiniz."
+  },
+  {
+    "Soru": "Faaliyet gösteren kulüpler neler?",
+    "Cevap": "Universitemizde ders dışı zamanlarını yararlı bir şekilde geçirmeleri amacı ile kültür, sanat, spor, düşünce ve kariyer alanlarında faaliyetlerde bulunmak üzere kurulmuş 78 öğrenci topluluğu bulunmaktadır. Bu toplulukları incelemek için https://www.omu.edu.tr/tr/ogrenci/ogrenci-topluluklari adresini ziyaret edebilirsiniz."
+  },
+  {
+    "Soru": "Üniversite kulüpleri var mı?",
+    "Cevap": "Universitemizde ders dışı zamanlarını yararlı bir şekilde geçirmeleri amacı ile kültür, sanat, spor, düşünce ve kariyer alanlarında faaliyetlerde bulunmak üzere kurulmuş 78 öğrenci topluluğu bulunmaktadır. Bu toplulukları incelemek için https://www.omu.edu.tr/tr/ogrenci/ogrenci-topluluklari adresini ziyaret edebilirsiniz."
+  },
+  {
+    "Soru": "Hangi kulüp ve öğrenci organizasyonlarına katılmalıyım?",
+    "Cevap": "Universitemizde ders dışı zamanlarını yararlı bir şekilde geçirmeleri amacı ile kültür, sanat, spor, düşünce ve kariyer alanlarında faaliyetlerde bulunmak üzere kurulmuş 78 öğrenci topluluğu bulunmaktadır. Bu toplulukları incelemek için https://www.omu.edu.tr/tr/ogrenci/ogrenci-topluluklari adresini ziyaret edebilirsiniz."
+  },
+  {
+    "Soru": "Üniversitenin kulüpleri hakkında bilgi alabilir miyim?",
+    "Cevap": "Universitemizde ders dışı zamanlarını yararlı bir şekilde geçirmeleri amacı ile kültür, sanat, spor, düşünce ve kariyer alanlarında faaliyetlerde bulunmak üzere kurulmuş 78 öğrenci topluluğu bulunmaktadır. Bu toplulukları incelemek için https://www.omu.edu.tr/tr/ogrenci/ogrenci-topluluklari adresini ziyaret edebilirsiniz."
+  },
+  {
+    "Soru": "Üniversitede En popüler kulüpler hangileri ?",
+    "Cevap": "https://topluluk.omu.edu.tr/ Sitesindeki bilgilere göre en popüler topluluğun 791 kişinin bulunduğu Dağcılık ve Kış Sporları Arama Kurtarma Topluluğu, en popüler 2. topluluğun ise 724 öğrencinin bulunduğu Yabancı Diller Topluluğu olarak gözükmektedir."
+  },
+  {
+    "Soru": "Okulumuzda kulüplerine girmek için ne yapmalıyım?",
+    "Cevap": "Üniversitemizde kulüp temsilcileri bulunmaktadır. Bu temsilcilere ulaşarak veya düzenli olarak açılan standtları takip ederek kulüplere katılabilirsiniz."
+  },
+  {
+    "Soru": "Okulumuzda kaç bölüm bulunmaktadır?",
+    "Cevap": "Üniversitemizde 19 fakültede toplam 86 bölüm bulunmaktadır."
+  },
+  {
+    "Soru": "Öğrenci kartı nereden alınır",
+    "Cevap": "Kaydınız tamamlandıktan sonra bölüm genel sekreterliğinden öğrenci kartınızı alabilirsiniz."
+  },
+  {
+    "Soru": "Öğrenci kartını kaybettim ne yapmalıyım ?",
+    "Cevap": "Belli bir ücret karşılığında üniversitenin öğrenci işlerinden yeni bir kart çıkartabilirsiniz."
+  },
+  {
+    "Soru": "Seçmeli derslere nerden bakabilirim",
+    "Cevap": "Sosyal seçmeli dersler hakkında detalı bilgi için https://oidb.omu.edu.tr/tr/haberler/sosyal-secmeli-dersler-birim-ve-derslik-bilgileri adresini ziyaret edeilirsiniz."
+  },
+  {
+    "Soru": "Bir dönemde kaç seçmeli ders alabilirim?",
+    "Cevap": "Seçmeli dersler sosyal seçmeli ve teknik seçmeli dersler olarak ayrılmaktadır. Sosyal seçmeli olarak yalnızca bir ders alınabilirken teknik seçmeli dersler bölümler arasında farklılık göstermektedir."
+  },
+  {
+    "Soru": "Ders seçimlerini nereden ve nasıl yapacağım?",
+    "Cevap": "Ders kayıt işlemleri https://ubys.omu.edu.tr/ adresi üzerinden yapılmaktadır. Sorun yaşadığnız taktirde danışman hocanızdan yardım alabilirsiniz."
+  },
+  {
+    "Soru": "Ders kayıtları nereden yapılıyor?",
+    "Cevap": "Ders kayıt işlemleri https://ubys.omu.edu.tr/ adresi üzerinden yapılmaktadır. Sorun yaşadığnız taktirde danışman hocanızdan yardım alabilirsiniz."
+  },
+  {
+    "Soru": "Ders nasıl seçilir?",
+    "Cevap": "Ders kayıt işlemleri https://ubys.omu.edu.tr/ adresi üzerinden yapılmaktadır. Sorun yaşadığnız taktirde danışman hocanızdan yardım alabilirsiniz."
+  },
+  {
+    "Soru": "Ders seçim ekranında derslerimi göremiyorum ne yapmam lazım?",
+    "Cevap": "Ders planlarınıza bağlı olarak derslerinizin sistemde gözükmemesi dersin kaldırılmış olması, kodunun değişmiş olması, dersin açılmamış veya eksik açılmış olması nedeniyle olabilir. Bu durumda danışmanınızla irtibata geçiniz. Fakat sorun çözülmeden ders kaydınızı tamamlamayınız"
+  },
+  {
+    "Soru": "Ders seçimi sırasında dersler önüme gelmiyor.",
+    "Cevap": "Ders planlarınıza bağlı olarak derslerinizin sistemde gözükmemesi dersin kaldırılmış olması, kodunun değişmiş olması, dersin açılmamış veya eksik açılmış olması nedeniyle olabilir. Bu durumda danışmanınızla irtibata geçiniz. Fakat sorun çözülmeden ders kaydınızı tamamlamayınız"
+  },
+  {
+    "Soru": "Ders seçiminde derslerim sistemde gözükmüyor.",
+    "Cevap": "Ders planlarınıza bağlı olarak derslerinizin sistemde gözükmemesi dersin kaldırılmış olması, kodunun değişmiş olması, dersin açılmamış veya eksik açılmış olması nedeniyle olabilir. Bu durumda danışmanınızla irtibata geçiniz. Fakat sorun çözülmeden ders kaydınızı tamamlamayınız"
+  },
+  {
+    "Soru": "Ders seçme ekranında alacağım dersler çıkmıyor ne yapmam gerekiyor?",
+    "Cevap": "Ders planlarınıza bağlı olarak derslerinizin sistemde gözükmemesi dersin kaldırılmış olması, kodunun değişmiş olması, dersin açılmamış veya eksik açılmış olması nedeniyle olabilir. Bu durumda danışmanınızla irtibata geçiniz. Fakat sorun çözülmeden ders kaydınızı tamamlamayınız"
+  },
+  {
+    "Soru": "Ders kayıt aşamasında en çok hangi hususlara dikkat etmem gerekir?",
+    "Cevap": "Ders kaydında üç önemli hususa dikkat etmeniz gerekir. Eksik ders alarak dönem uzatmamak için her dönem başında müfredat durum kontrolü, akademik takvimde belirtilen süre içinde kaydın tamamlanması ve danışman onayı işlemidir."
+  },
+  {
+    "Soru": "Derslere kayıt olurken nelere göre kaydolmam lazım?",
+    "Cevap": "Ders kaydında üç önemli hususa dikkat etmeniz gerekir. Eksik ders alarak dönem uzatmamak için her dönem başında müfredat durum kontrolü, akademik takvimde belirtilen süre içinde kaydın tamamlanması ve danışman onayı işlemidir."
+  },
+  {
+    "Soru": "Danışman onay bittikten sonra yapmam gereken bir şey var mı?",
+    "Cevap": "Danışman onayı işlemi tamamlandıktan sonra, kayıtlanmış olduğunuz dersleri tek tek kontrol ediniz. Sizin danışman onayına göndermiş olduğunuz derslerden bir veya birkaçı danışmanınız tarafından listeden çıkartılmış olabilir."
+  },
+  {
+    "Soru": "Seçtiğim dersleri danışmana gönderdim, onaylandı. Şimdi ne yapmalıyım?",
+    "Cevap": "Danışman onayı işlemi tamamlandıktan sonra, kayıtlanmış olduğunuz dersleri tek tek kontrol ediniz. Sizin danışman onayına göndermiş olduğunuz derslerden bir veya birkaçı danışmanınız tarafından listeden çıkartılmış olabilir."
+  },
+  {
+    "Soru": "Geçtiğim dersi not yükseltmek için tekrar alabilir miyim",
+    "Cevap": "Hayır alamazsınız. Ondokuz Mayıs Üniversitesi not yükseltmek için ders tekrarına izin vermemektedir."
+  },
+  {
+    "Soru": "Sınav sonuçlarına nasıl itiraz edebilirim?",
+    "Cevap": "Akademik takvimde belirtilen sınav not girişlerinin sisteme girilmesinin son gününden itibaren beş iş günü içerisinde ilgili birime (Bölüm Başkanlığına ) dilekçe vererek itiraz edebilirsiniz."
+  },
+  {
+    "Soru": "Ne zamana kadar sınav sonuçlarına itiraz edebilirim?",
+    "Cevap": "Akademik takvimde belirtilen sınav not girişlerinin sisteme girilmesinin son gününden itibaren beş iş günü içerisinde ilgili birime (Bölüm Başkanlığına ) dilekçe vererek itiraz edebilirsiniz."
+  },
+  {
+    "Soru": "Stajlarda bütünleme sınav hakkı var mıdır?",
+    "Cevap": "Üniversitemizde stajlar için bütünleme sınav hakkı yoktur. Başarısız olunan stajın tekrar alınması gerekir."
+  },
+  {
+    "Soru": "Staj için bütünleme sınavı var mı?",
+    "Cevap": "Üniversitemizde stajlar için bütünleme sınav hakkı yoktur. Başarısız olunan stajın tekrar alınması gerekir."
+  },
+  {
+    "Soru": "Ara sınavlarda mazeret sınavı yapılıyor mu?",
+    "Cevap": "Fakülte, yüksekokul ve meslek yüksekokullarında, ara sınavlardan herhangi birine haklı ve geçerli nedenlerle katılamayan öğrenciler için ara sınavlardan genellikle 1-2 hafta sonra mazeret sınavı yapılmaktadır."
+  },
+  {
+    "Soru": "Mazeret sınavı var mı?",
+    "Cevap": "Fakülte, yüksekokul ve meslek yüksekokullarında, ara sınavlardan herhangi birine haklı ve geçerli nedenlerle katılamayan öğrenciler için ara sınavlardan genellikle 1-2 hafta sonra mazeret sınavı yapılmaktadır."
+  },
+  {
+    "Soru": "Mazeret sınavı ne zaman yapılıyor?",
+    "Cevap": "Fakülte, yüksekokul ve meslek yüksekokullarında, ara sınavlardan herhangi birine haklı ve geçerli nedenlerle katılamayan öğrenciler için ara sınavlardan genellikle 1-2 hafta sonra mazeret sınavı yapılmaktadır."
+  },
+  {
+    "Soru": "Yarıyıl sonu / Bütünleme sınavlarının mazeret sınav hakkı var mı?",
+    "Cevap": "Üniversitemizde yıl sonu ve bütünleme sınavlarının mazeret sınavı yoktur."
+  },
+  {
+    "Soru": "Finallerin mazeret sınavı var mı ?",
+    "Cevap": "Üniversitemizde yıl sonu ve bütünleme sınavlarının mazeret sınavı yoktur."
+  },
+  {
+    "Soru": "Bütünleme için mazeret sınavı var mı ?",
+    "Cevap": "Üniversitemizde yıl sonu ve bütünleme sınavlarının mazeret sınavı yoktur."
+  },
+  {
+    "Soru": "Mazeret sınavına nasıl girebilirim ?",
+    "Cevap": "Öğrenciler, mazeretlerine ilişkin isteklerini, mazeretin bitiminden bir hafta içerisinde ilgili Dekanlık/Müdürlüklere dilekçe ile bildirmelidir."
+  },
+  {
+    "Soru": "Mazeret sınavına girmek için almış olduğum sağlık raporunu kaç gün içinde nereye vermem gerekir?",
+    "Cevap": "Öğrenciler, mazeretlerine ilişkin isteklerini, mazeretin bitiminden bir hafta içerisinde ilgili Dekanlık/Müdürlüklere dilekçe ile bildirmelidir."
+  },
+  {
+    "Soru": "Ara sınav ve yarıyıl sonu sınavları ortalama hangi oranlarda etki eder?",
+    "Cevap": "Üniversitemizde ders geçme sisteminin uygulandığı birimlerde, bir dersin başarı puanı dönem içi değerlendirme puanının % 40’ı ile yarıyıl sonu veya bütünleme sınavından alınan puanın % 60’ı, Diş Hekimliği Fakültesinde dönem içi değerlendirme puanının % 50’si ile yılsonu veya bütünleme sınav puanının %50’sinin toplamıdır. Başarılı olmak için bu toplamın 60 puan ve üzerinde olması gerekmektedir."
+  },
+  {
+    "Soru": "Dersin başarı puanı neye göre belli olur?",
+    "Cevap": "Üniversitemizde ders geçme sisteminin uygulandığı birimlerde, bir dersin başarı puanı dönem içi değerlendirme puanının % 40’ı ile yarıyıl sonu veya bütünleme sınavından alınan puanın % 60’ı, Diş Hekimliği Fakültesinde dönem içi değerlendirme puanının % 50’si ile yılsonu veya bütünleme sınav puanının %50’sinin toplamıdır. Başarılı olmak için bu toplamın 60 puan ve üzerinde olması gerekmektedir."
+  },
+  {
+    "Soru": "Yarıyıl/yılsonu başarı notumun en az kaç olması gerekir?",
+    "Cevap": "Bir dersten başarılı sayılabilmek için; yarıyıl/yılsonu veya bütünleme sınav puanının en az 50, başarı puanının en az 60 olması zorunludur. Uzaktan eğitim öğrencilerinin başarı puanı dönem içi sınavının % 20’si ile yıl sonu sınavı puanının veya bütünleme sınavının %80’inin toplamıdır."
+  },
+  {
+    "Soru": "Derslerde nasıl başarılı sayılıyoruz ?",
+    "Cevap": "Bir dersten başarılı sayılabilmek için; yarıyıl/yılsonu veya bütünleme sınav puanının en az 50, başarı puanının en az 60 olması zorunludur. Uzaktan eğitim öğrencilerinin başarı puanı dönem içi sınavının % 20’si ile yıl sonu sınavı puanının veya bütünleme sınavının %80’inin toplamıdır."
+  },
+  {
+    "Soru": "Dersi geçmek için finallerden kaç almam lazım",
+    "Cevap": "Bir dersten başarılı sayılabilmek için; yarıyıl/yılsonu veya bütünleme sınav puanının en az 50, başarı puanının en az 60 olması zorunludur. Uzaktan eğitim öğrencilerinin başarı puanı dönem içi sınavının % 20’si ile yıl sonu sınavı puanının veya bütünleme sınavının %80’inin toplamıdır."
+  },
+  {
+    "Soru": "Dersleri nasıl başarılı bir şekilde geçebiliriz?",
+    "Cevap": "Bir dersten başarılı sayılabilmek için; yarıyıl/yılsonu veya bütünleme sınav puanının en az 50, başarı puanının en az 60 olması zorunludur. Uzaktan eğitim öğrencilerinin başarı puanı dönem içi sınavının % 20’si ile yıl sonu sınavı puanının veya bütünleme sınavının %80’inin toplamıdır."
+  },
+  {
+    "Soru": "Devamsızlıktan kaldığım dersin bütünleme sınavına girebilir miyim?",
+    "Cevap": "Üniversitemizde bir dersten devamsızlıktan kalan öğrenci o dersin bütünleme sınavına giremez."
+  },
+  {
+    "Soru": "Tek ders sınavı nedir? Tek ders sınavına ne zaman başvurmam gerekir?",
+    "Cevap": "Müfredatınızda tanımlı bütün dersleri almış fakat mezuniyetiniz için daha önce devam şartını sağladığınız tek dersinizin kalmış olması durumunda o dersten tek ders sınavına girebilirsiniz. Bütünleme sınavlarını takip eden bir hafta içinde dilekçe ile biriminize başvurmanız ve başvurunuzun uygun görülmesi halinde on gün içinde birimlerce açılacak tek ders sınavına girebilirsiniz."
+  },
+  {
+    "Soru": "Tek ders sınavı için başvuru yapmam lazım mı?",
+    "Cevap": "Müfredatınızda tanımlı bütün dersleri almış fakat mezuniyetiniz için daha önce devam şartını sağladığınız tek dersinizin kalmış olması durumunda o dersten tek ders sınavına girebilirsiniz. Bütünleme sınavlarını takip eden bir hafta içinde dilekçe ile biriminize başvurmanız ve başvurunuzun uygun görülmesi halinde on gün içinde birimlerce açılacak tek ders sınavına girebilirsiniz."
+  },
+  {
+    "Soru": "Tek ders sınavı sonucunda hangi not aldığımda başarılı sayılabilirim?",
+    "Cevap": "Tek ders sınavında ara sınav şartı aranmaksızın en az CC alırsanız başarılı sayılırsınız."
+  },
+  {
+    "Soru": "Tek ders sınavını nasıl geçerim ?",
+    "Cevap": "Tek ders sınavında ara sınav şartı aranmaksızın en az CC alırsanız başarılı sayılırsınız."
+  },
+  {
+    "Soru": "Henüz staj dersimi tamamlamadığım halde tek ders sınavına girebilir miyim?",
+    "Cevap": "Evet. öğrenciler staj dersini tamamlamasa bile tek ders sınavına girebilirler."
+  },
+  {
+    "Soru": "Stajı vermeden tek ders sınavına girebilir miyim ?",
+    "Cevap": "Evet. öğrenciler staj dersini tamamlamasa bile tek ders sınavına girebilirler."
+  },
+  {
+    "Soru": "Bağıl değerlendirme nedir?",
+    "Cevap": "Öğrencilerin yarıyıl içi çalışmaları (laboratuvar, kısa sınav, ödev vb.) ile ara sınav ve yarıyıl sonu sınavı katkı paylarına göre hesaplanan ağırlıklı ortalamasını, o dersi alan diğer öğrencilerin puanlarını dikkate alarak başarı düzeyini belirleyen bir sistemdir."
+  },
+  {
+    "Soru": "Bağıl değerlendirmeye dahil edilmek için alt not var mıdır?",
+    "Cevap": "Eğer öğrencinin ham puanı 20'nin altındaysa bağıl değerlendirmeye dahil edilmez ve FF not alır."
+  },
+  {
+    "Soru": "Bağıl değerlendirmeye kimler girer, hangi öğrenciler girmez.",
+    "Cevap": "Eğer öğrencinin ham puanı 20'nin altındaysa bağıl değerlendirmeye dahil edilmez ve FF not alır."
+  },
+  {
+    "Soru": "Öğrenci sayısına göre değerlendirmelerde farklılık var mıdır?",
+    "Cevap": "Öğrenci sayısı 10 ve altında ise öğrenciler mutlak değerlendirmeye tabi tutulur. 11 - 29 arası farklı 30 ve üstü ise farklı kriterlere göre değerlendirilir."
+  },
+  {
+    "Soru": "Az sayıda öğrenci varsa dersin değerlendirmesi nasıl olur.",
+    "Cevap": "Öğrenci sayısı 10 ve altında ise öğrenciler mutlak değerlendirmeye tabi tutulur. 11 - 29 arası farklı 30 ve üstü ise farklı kriterlere göre değerlendirilir."
+  },
+  {
+    "Soru": "Bir dersten başarılı sayılabilmek için Yarıyıl/Yıl Sonu Sınavı Alt Limiti var mıdır?",
+    "Cevap": "100 puan üzerinden 50’nin altında not alan öğrenciler başarısız sayılır fakat bağıl değerlendirmeye dahil edilirler."
+  },
+  {
+    "Soru": "Finalden kaç alırsam dersten kalırım",
+    "Cevap": "100 puan üzerinden 50’nin altında not alan öğrenciler başarısız sayılır fakat bağıl değerlendirmeye dahil edilirler."
+  },
+  {
+    "Soru": "AKTS Kredi Sistemi Nedir?",
+    "Cevap": "AKTS kredisi, ders ünitelerini tamamlamak için gerekli öğrenci iş yükünü gösteren (1 ile 60 arasında) sayısal bir değerdir. Bu değer, bir kurumdaki yıllık akademik çalışma içerisinde her bir dersin gerektirdiği iş yükünü gösterir. Bu iş yükü içerisine bir akademik yılda ders kapsamındaki pratik çalışmalar, seminerler, alan çalışmaları, bireysel çalışmalar, sınavlar gibi çalışmalar da girer."
+  },
+  {
+    "Soru": "AKTS ne işe yarar",
+    "Cevap": "AKTS kredisi, ders ünitelerini tamamlamak için gerekli öğrenci iş yükünü gösteren (1 ile 60 arasında) sayısal bir değerdir. Bu değer, bir kurumdaki yıllık akademik çalışma içerisinde her bir dersin gerektirdiği iş yükünü gösterir. Bu iş yükü içerisine bir akademik yılda ders kapsamındaki pratik çalışmalar, seminerler, alan çalışmaları, bireysel çalışmalar, sınavlar gibi çalışmalar da girer."
+  },
+  {
+    "Soru": "Bir dersin AKTS Kredisi değeri nasıl hesaplanır?",
+    "Cevap": "AKTS değeri, o dersin iş yükünün hesaplanması ile oluşur. Örneğin 2 kredilik bir ders için AKTS değerini hesaplamaya çalışalım. 2 saatlik olan ve 14 haftalık ders için; 28 saatlik derse katılım, 1 saat vize, 1 saat final sınavı, 6 saat sınava hazırlık, 14 saat ise ders ve ödev olarak düşünüldüğünde öğrenciye 50 saatlik iş yükü yüklemektedir. 50 saatlik iş yükü de 2 AKTS’lik değer oluşturmaktadır."
+  },
+  {
+    "Soru": "AKTS neye göre hesaplanır",
+    "Cevap": "AKTS değeri, o dersin iş yükünün hesaplanması ile oluşur. Örneğin 2 kredilik bir ders için AKTS değerini hesaplamaya çalışalım. 2 saatlik olan ve 14 haftalık ders için; 28 saatlik derse katılım, 1 saat vize, 1 saat final sınavı, 6 saat sınava hazırlık, 14 saat ise ders ve ödev olarak düşünüldüğünde öğrenciye 50 saatlik iş yükü yüklemektedir. 50 saatlik iş yükü de 2 AKTS’lik değer oluşturmaktadır."
+  },
+  {
+    "Soru": "Üniversiteyi bitirme şartı nedir ?",
+    "Cevap": "Kayıtlı olduğunuz öğretim programının ders, uygulama, staj gibi tüm gereklerini OMU Eğitim Öğretim ve Sınav Yönetmeliği hükümlerine göre başarıyla tamamlamanız ve GANO’nuzun 2,00 veya daha yüksek olması halinde diploma almaya hak kazanırsınız."
+  },
+  {
+    "Soru": "Mezun olabilme koşulları nelerdir?",
+    "Cevap": "Kayıtlı olduğunuz öğretim programının ders, uygulama, staj gibi tüm gereklerini OMU Eğitim Öğretim ve Sınav Yönetmeliği hükümlerine göre başarıyla tamamlamanız ve GANO’nuzun 2,00 veya daha yüksek olması halinde diploma almaya hak kazanırsınız."
+  },
+  {
+    "Soru": "Üniversiteden nasıl mezun olurum",
+    "Cevap": "Kayıtlı olduğunuz öğretim programının ders, uygulama, staj gibi tüm gereklerini OMU Eğitim Öğretim ve Sınav Yönetmeliği hükümlerine göre başarıyla tamamlamanız ve GANO’nuzun 2,00 veya daha yüksek olması halinde diploma almaya hak kazanırsınız."
+  },
+  {
+    "Soru": "Üniversitemizden mezun olabilmek için kaç AKTS krediyi kamamlamam gerekmektedir?",
+    "Cevap": "5-i Dersleri dışında dört yıllık öğretim programlarında 240 AKTS, beş yıllık öğretim programlarında 300 AKTS, altı yıllık öğretim programlarında 360 AKTS ve meslek yüksekokulu programlarında ise 120 AKTS kredisini tamamlamak üniversitemizin mezun olma şartıdır."
+  },
+  {
+    "Soru": "Kaç AKTS aldıktan sonra üniversiteyi bitirebilirim",
+    "Cevap": "5-i Dersleri dışında dört yıllık öğretim programlarında 240 AKTS, beş yıllık öğretim programlarında 300 AKTS, altı yıllık öğretim programlarında 360 AKTS ve meslek yüksekokulu programlarında ise 120 AKTS kredisini tamamlamak üniversitemizin mezun olma şartıdır."
+  },
+  {
+    "Soru": "Burs başvuruları ne zaman yapılır?",
+    "Cevap": "Burs başvuruları ilgili kurumların ilan ettiği tarihler arasında yapılmaktadır. Burs verecek kurumların duyuruları ve WEB sayfalarını takip ederek tarihler öğrenilebilir."
+  },
+  {
+    "Soru": "Bursları nasıl takip edebilirim",
+    "Cevap": "Burs başvuruları ilgili kurumların ilan ettiği tarihler arasında yapılmaktadır. Burs verecek kurumların duyuruları ve WEB sayfalarını takip ederek tarihler öğrenilebilir."
+  },
+  {
+    "Soru": "Hangi şartlarda bursum kesilir?",
+    "Cevap": "Kredi Yurtlar Kurumu bursu için yıllık toplam kredinin % 60’ını tamamlayamadığınız takdirde, Ondokuz Mayıs Üniversitesi Vakfı bursu için 1 dersten fazla dersten başarısız olduğunuz takdirde, diğer vakıflar için alttan dersinizin bulunması halinde bursunuz kesilir. Kayıtlı olduğunuz üniversiteden başka bir üniversiteye geçiş yaptığınız takdirde de bursunuz kesilir."
+  },
+  {
+    "Soru": "Derslerden kalırsam bursum gider mi",
+    "Cevap": "Kredi Yurtlar Kurumu bursu için yıllık toplam kredinin % 60’ını tamamlayamadığınız takdirde, Ondokuz Mayıs Üniversitesi Vakfı bursu için 1 dersten fazla dersten başarısız olduğunuz takdirde, diğer vakıflar için alttan dersinizin bulunması halinde bursunuz kesilir. Kayıtlı olduğunuz üniversiteden başka bir üniversiteye geçiş yaptığınız takdirde de bursunuz kesilir."
+  },
+  {
+    "Soru": "Ne olursa bursum kesilir?",
+    "Cevap": "Kredi Yurtlar Kurumu bursu için yıllık toplam kredinin % 60’ını tamamlayamadığınız takdirde, Ondokuz Mayıs Üniversitesi Vakfı bursu için 1 dersten fazla dersten başarısız olduğunuz takdirde, diğer vakıflar için alttan dersinizin bulunması halinde bursunuz kesilir. Kayıtlı olduğunuz üniversiteden başka bir üniversiteye geçiş yaptığınız takdirde bursunuz kesilir."
+  },
+  {
+    "Soru": "Diploma eki nedir?",
+    "Cevap": "Diploma Eki (Diploma Supplement: DS), uluslararası saydamlığı pekiştirmeyi hedefleyen ve elde edilmiş yeti ve becerilerin ifade edildiği diploma, derece, sertifika gibi belgelerin, akademik ve meslekî tanınmasını sağlamaya yönelik, bir yükseköğretim diplomasına ek olarak verilen belgedir."
+  },
+  {
+    "Soru": "Diploma eki neden gereklidir?",
+    "Cevap": "Orijinal diploma ve diğer belgeler kendi başlarına yeterli açıklayıcı bilgi arz etmediklerinden dolayı, ayrıntılı ek açıklama tedarik etmeden bir diplomanın düzey ve işlevini kabul ettirmek son derece güç bir hal almıştır. Bu yüzden diploma eki gereklidir."
+  },
+  {
+    "Soru": "Diploma ekinin Avrupa’daki tanınırlığı nedir?",
+    "Cevap": "Ulusal kurumlar tarafından, Avrupa Komisyonu, Avrupa Konseyi ve UNESCO tarafından ortaklaşa hazırlanmış bir şablona göre düzenlenir. Bu üç kurumun organize ettiği bir ortak kurul tarafından denenmiş ve geliştirilmiş olan bu şablon, Avrupa Birliğinin tüm resmî dillerinde düzenlenmiştir."
+  },
+  {
+    "Soru": "Diploma ekini transkript yerine kullanabilir miyim?",
+    "Cevap": "Hayır, Diploma eki transkript (not çizelgesi) veya diploma yerine geçmez."
+  },
+  {
+    "Soru": "Uluslararası öğrenciler değişim programından yararlanabilirler mi?",
+    "Cevap": "Üniversitemizde bulunan uluslararası öğrenciler değişim programlarından (Mevlana, Erasmus, Farabi) yararlanabilirler."
+  },
+  {
+    "Soru": "Yabancı öğrenciler Erasmus'a gidebilir mi ?",
+    "Cevap": "Üniversitemizde bulunan uluslararası öğrenciler değişim programlarından (Mevlana, Erasmus, Farabi) yararlanabilirler."
+  },
+  {
+    "Soru": "Erasmus'a kimler gidebilir",
+    "Cevap": "Bu faaliyetin yararlanıcıları yükseköğretim kurumlarının öğrenci ve personelidir. Ancak, başvuru, yükseköğretim kurumu ya da ulusal yükseköğretim hareketlilik konsorsiyumu koordinatörü tarafından yapılmalıdır. Bireysel başvuru kabul edilmemektedir."
+  },
+  {
+    "Soru": "Erasmus için başvuru kimler yapabilir?",
+    "Cevap": "Bu faaliyetin yararlanıcıları yükseköğretim kurumlarının öğrenci ve personelidir. Ancak, başvuru, yükseköğretim kurumu ya da ulusal yükseköğretim hareketlilik konsorsiyumu koordinatörü tarafından yapılmalıdır. Bireysel başvuru kabul edilmemektedir."
+  },
+  {
+    "Soru": "Ondokuzmayıs Üniversitesi konaklama imkanı sağlıyor mu? Uluslararası öğrenciler yurtlara başvurabilir mi? Başvuru şartlan ve olanaklar nelerdir?",
+    "Cevap": "Üniversitemiz kampüs içinde uzun süreli konaklama imkanı sunmamaktadır. Konaklamadan öğrencinin kendisi sorumludur."
+  },
+  {
+    "Soru": "Yabancı öğrencilere yurt sağlanıyor mu ?",
+    "Cevap": "Üniversitemiz kampüs içinde uzun süreli konaklama imkanı sunmamaktadır. Konaklamadan öğrencinin kendisi sorumludur."
+  },
+  {
+    "Soru": "Uluslararası öğrencilerin üniversitenize kabulü nasıl gerçekleşir? Giriş koşulları nelerdir?",
+    "Cevap": "İnternet sayfamızda 19 Mayıs Üniversitesi Önlisans ve Lisans Düzeyinde Ondokuz Mayıs Üniversitesi Uluslararası Öğrenci Başvuru Ve Kayıt Kabul Yönergesi’nde yer alan koşulları sağlayan öğrencilerin başvuruları değerlendirmeye alınır."
+  },
+  {
+    "Soru": "Yabancı öğrenciler nasıl üniversitemize kayıt olabilir ?",
+    "Cevap": "İnternet sayfamızda 19 Mayıs Üniversitesi Önlisans ve Lisans Düzeyinde Ondokuz Mayıs Üniversitesi Uluslararası Öğrenci Başvuru Ve Kayıt Kabul Yönergesi’nde yer alan koşulları sağlayan öğrencilerin başvuruları değerlendirmeye alınır."
+  },
+  {
+    "Soru": "Türkçe bilmiyorum. Bu konuda nasıl yardımcı olabilirsiniz?",
+    "Cevap": "Üniversitemizin Türkçe Düzeyi C1 olan diploma düzeyidir. Türkçe bilmeyen ya da dil muafiyet sınavlarında başarılı olamayan öğrencilerimiz, Üniversitemiz Türkçe Öğretimi Uygulama ve Araştırma Merkezine ya da farklı bir Türkçe Eğitim Merkezine yönlendirilmektedirler. Diploma Düzeyi Seviyesine ulaştıktan sonra kayıtlı oldukları programda akademik eğitimlerine devam edebilirler. Ayrıntılı bilgi için: http://omuturkce.omu.edu.tr/"
+  },
+  {
+    "Soru": "Yabancı öğrenciler türkçeyi nereden ve nasıl öğrenebilir ?",
+    "Cevap": "Üniversitemizin Türkçe Düzeyi C1 olan diploma düzeyidir. Türkçe bilmeyen ya da dil muafiyet sınavlarında başarılı olamayan öğrencilerimiz, Üniversitemiz Türkçe Öğretimi Uygulama ve Araştırma Merkezine ya da farklı bir Türkçe Eğitim Merkezine yönlendirilmektedirler. Diploma Düzeyi Seviyesine ulaştıktan sonra kayıtlı oldukları programda akademik eğitimlerine devam edebilirler. Ayrıntılı bilgi için: http://omuturkce.omu.edu.tr/"
+  },
+  {
+    "Soru": "Transkript belgemi nasıl alabilirim?",
+    "Cevap": "Öğrenimine devam eden öğrencilerimiz transkript belgelerini bölüm/program sekreterliklerine şahsen başvurarak alabilmektedirler. Mezun olan öğrencilerimiz Öğrenci İşleri Daire Başkanlığı diploma birimine şahsen müracaat ederek alabilir, kendisi gelip alamıyor ise bir dilekçe ile adresine gönderilmesini isteyebilir. Transkript belgesinin 1 (bir) adedi ücretsizdir"
+  },
+  {
+    "Soru": "Yeni mezun oldum. Diplomamı ne zaman alabilirim?",
+    "Cevap": "Dönem sonlarında WEB sitemizde ilan edilen takvimde belirtilen tarihlerden itibaren öğrenci kimlik kartı ve nüfus cüzdanı ile birlikte Öğrenci İşleri Daire Başkanlığı Diploma Birimine müracaat edilerek diplomalar alınabilmektedir."
+  },
+  {
+    "Soru": "Diplomamı nereden alacağım ?",
+    "Cevap": "Dönem sonlarında WEB sitemizde ilan edilen takvimde belirtilen tarihlerden itibaren öğrenci kimlik kartı ve nüfus cüzdanı ile birlikte Öğrenci İşleri Daire Başkanlığı Diploma Birimine müracaat edilerek diplomalar alınabilmektedir."
+  },
+  {
+    "Soru": "Nasıl üniversitenizde özel öğrenci olabilirim ?",
+    "Cevap": "Üniversitemiz Özel Öğrenci Yönergesi'nde istenen belgelerle ilgili Fakülte/Yüksekokula dilekçe ile başvuru yapmanız gerekir."
+  },
+  {
+    "Soru": "Özel öğrenci olarak nasıl başvuru yapabilirim?",
+    "Cevap": "Üniversitemiz Özel Öğrenci Yönergesi'nde istenen belgelerle ilgili Fakülte/Yüksekokula dilekçe ile başvuru yapmanız gerekir."
+  },
+  {
+    "Soru": "Üniversitenize özel öğrenci olarak kabul edildim ne yapmalıyım?",
+    "Cevap": "Özel öğrenci olarak kabul edildiğiniz birime (Merkez Kampüste ise Öğrenci İşleri Daire Başkanlığı, Merkez Kampüs Dışında İse Birimlerin Kendilerine) müracaat ederek, kesin kaydınızı yaptırmanız gerekmektedir."
+  },
+  {
+    "Soru": "Yatay geçiş başvuru tarihlerini nasıl öğrenebilirim?",
+    "Cevap": "Üniversitemiz ve Daire Başkanlığımız internet sayfalarında yayınlanan duyuruda yatay geçiş başvuru ve değerlendirme takvimi yayınlanmaktadır. Duyuru sayfasına ulaşmak için https://oidb.omu.edu.tr/tr/ogrenci/yatay-gecis adresini ziyaret edin."
+  },
+  {
+    "Soru": "Yatay geçiş nasıl yapabilirim ?",
+    "Cevap": "Üniversitemiz ve Daire Başkanlığımız internet sayfalarında yayınlanan duyuruda yatay geçiş başvuru ve değerlendirme takvimi yayınlanmaktadır. Duyuru sayfasına ulaşmak için https://oidb.omu.edu.tr/tr/ogrenci/yatay-gecis adresini ziyaret edin."
+  },
+  {
+    "Soru": "Yatay geçiş türleri nelerdir? Hangi türde başvuru yapabilirim?",
+    "Cevap": "Kurum içi yatay geçiş: Üniversitemiz öğrencilerinin aynı düzeydeki diğer diploma programlarına geçiş türüdür. Sadece Üniversitemiz öğrencileri başvurabilir. Kurumlar arası yatay geçiş: Bir üniversite, yüksek teknoloji enstitüsü veya vakıflar tarafından bir üniversiteye bağlı olmaksızın kurulan meslek yüksekokullarından Ondokuz Mayıs Üniversitesindeki eşdeğer eğitim veren fakülte, yüksekokul veya bölüme yapılan geçiş türüdür. Farklı kurumlarda öğrenim gören öğrenciler başvuru yapabilir."
+  },
+  {
+    "Soru": "Yatay geçiş için gerekli başarı şartları nelerdir?",
+    "Cevap": "Kurumlararası yatay geçiş başvurusu yapabilmek için öğrencinin kayıtlı olduğu programda bitirmiş olduğu dönemlere ait genel not ortalamasının; önlisans programları için 100 üzerinden en az 60 veya 4 üzerinden en az 2.00; lisans programları için 100 üzerinden en az 70 veya 4 üzerinden en az 2.50, Tıp Fakültesi öğrencileri için ise 100 üzerinden en az 70 veya 4 üzerinden en az 2,91 olması gerekmektedir. Ortalama şartını sağlayan öğrencilerin başarısız dersleri olması başvurularının değerlendirilmesine engel değildir."
+  },
+  {
+    "Soru": "Hangi şartlarda yatay geçiş yapabilirim ?",
+    "Cevap": "Kurumlararası yatay geçiş başvurusu yapabilmek için öğrencinin kayıtlı olduğu programda bitirmiş olduğu dönemlere ait genel not ortalamasının; önlisans programları için 100 üzerinden en az 60 veya 4 üzerinden en az 2.00; lisans programları için 100 üzerinden en az 70 veya 4 üzerinden en az 2.50, Tıp Fakültesi öğrencileri için ise 100 üzerinden en az 70 veya 4 üzerinden en az 2,91 olması gerekmektedir. Ortalama şartını sağlayan öğrencilerin başarısız dersleri olması başvurularının değerlendirilmesine engel değildir."
+  },
+  {
+    "Soru": "Yatay geçiş yapabilme koşulu nedir ?",
+    "Cevap": "Kurumlararası yatay geçiş başvurusu yapabilmek için öğrencinin kayıtlı olduğu programda bitirmiş olduğu dönemlere ait genel not ortalamasının; önlisans programları için 100 üzerinden en az 60 veya 4 üzerinden en az 2.00; lisans programları için 100 üzerinden en az 70 veya 4 üzerinden en az 2.50, Tıp Fakültesi öğrencileri için ise 100 üzerinden en az 70 veya 4 üzerinden en az 2,91 olması gerekmektedir. Ortalama şartını sağlayan öğrencilerin başarısız dersleri olması başvurularının değerlendirilmesine engel değildir."
+  },
+  {
+    "Soru": "Birden fazla üniversiteye yatay geçiş başvurusu yapabilir miyim?",
+    "Cevap": "Farklı üniversitelere yatay geçiş başvurusu yapabilirsiniz. Birden çok yere kayıt hakkı kazanmanız durumunda, öğrenim görmek istediğiniz üniversiteye kaydınızı yaptırarak eğitiminize devam edebilirsiniz."
+  },
+  {
+    "Soru": "Yatay geçişle yabancı uyruklu öğrenci alıyor musunuz?",
+    "Cevap": "Kontenjan tablosunda yabancı uyruklu öğrenci kontenjanı bulunan programlara yatay geçiş başvurusu yapabilirsiniz."
+  },
+  {
+    "Soru": "Kayıtlı olduğum programı uzatmam durumunda katkı payını öder miyim?",
+    "Cevap": "Evet. Program süresini aşmanız durumunda ilgili dönem katkı payı ücreti ödenir."
+  },
+  {
+    "Soru": "Öğrenci harç iademi nasıl alabilirim?",
+    "Cevap": "İade gerekçenizi belirtir bir dilekçe ve kendi adınıza açılmış hesaba ait 26 haneli IBAN numaranızı belirtir banka çıktı görüntüsü ile Öğrenci İşleri Daire Başkanlığı harç bürosuna başvurmanız sonrasında, iade gerekçenizin haklı görülmesi halinde iade alabilirsiniz."
+  },
+  {
+    "Soru": "Üniversitenizde kayıtlı öğrenciyim. Engelli raporum bulunmaktadır. Öğrenim ücretinin ne kadarını yatırmalıyım?",
+    "Cevap": "Engelli olduğunuza dair sağlık raporunun aslı ve bir dilekçe ile birlikte okulunuz öğrenci işlerine müracaat etmeniz durumunda, engel oranınız kadar öğrenim ücretinden indirim yapılacaktır."
+  },
+  {
+    "Soru": "Muafiyet talep ettiğim dersin notu en az ne olmadır?",
+    "Cevap": "Bir dersten muaf olabilmesi için notunun en az CC ve üzeri olması gerekir. Fakat şartlı geçer statüsündeki ve bu derslerden geçmiş olmanız şartı ile daha alt notlardan da muafiyet talep edilebilir."
+  },
+  {
+    "Soru": "Daha önceden başardığım derslerden muaf tutulabilmem için ne yapmam gerekir?",
+    "Cevap": "Fakülteye/yüksekokula/meslek yüksekokuluna ilk kez kayıt yaptıran öğrenciler, eğitim öğretimin başladığı tarihten itibaren üç hafta içinde daha önce öğrenim gördüğü yükseköğretim kurumlarında aldığı ve başarılı olduğu dersler için muaf olmak istediği dersleri içeren bir dilekçe, onaylı transkript ve onaylı ders içerikleriyle ile birlikte ilgili birime başvurabilirler."
+  },
+  {
+    "Soru": "Üniversiteden kaydımı sildirmek için ne yapmam gerekir?",
+    "Cevap": "Kendiniz tarafından doldurulacak ilişik kesme formunu, form üzerinde belirtilen merkezlerde onaylattıktan sonra öğrenci işleri daire başkanlığına vermeniz yeterli olacaktır. Kaydınızın silinmesi ile birlikte öğrencilik hakkınız sona erer."
+  },
+  {
+    "Soru": "Sportif faaliyet dolayısıyla maksimum ne kadar izinli sayılabilirim?",
+    "Cevap": "Üniversite tarafından görevlendirilmiş iseniz, görevli olduğunuz sürece izinli sayılırsınız. Ancak, izinli sayıldığınız süre de dahil, toplam devamsızlık süresi bir dersin o yarıyıldaki/yıldaki toplam saatinin % 50’sini aşamazsınız."
+  },
+  {
+    "Soru": "En fazla ne kadar süre kayıt dondurabilirim?",
+    "Cevap": "Bir defada iki yarıyıla kadar olmak üzere, öğrenim süresi boyunca en fazla dört yarıyıl/iki yıl kaydınızı dondurulabilirsiniz."
+  },
+  {
+    "Soru": "Herhangi bir nedenle öğrenime ara vermek (kayıt dondurma) mümkün müdür?",
+    "Cevap": "Evet. Öğrencilere, kanıtlayacakları önemli nedenlerin veya eğitim öğretimlerine katkıda bulunacak Üniversite dışı burs, staj, araştırma ve benzeri imkânların ortaya çıkması halinde ilgili yönetim kurulu kararı kayıt dondurabilirler."
+  },
+  {
+    "Soru": "Ders ekleme/çıkarma nedir? Bu işlemi nasıl yapmalıyım?",
+    "Cevap": "Seçmiş olduğunuz derslerden açılmayan seçmeli ders olduğunda veya değiştirmek istediğiniz dersler için Akademik Takvimde belirtilen süreler içerisinde danışmanınızla irtibata geçerek yapabileceğiniz işlemdir."
+  },
+  {
+    "Soru": "Danışmanın kayıt olmak istediğim derslerde değişiklik yapma hakkı var mıdır?",
+    "Cevap": "Evet. Ondokuz Mayıs Üniversitesi Eğitim Öğretim ve Sınav Yönetmeliğinin 10. Maddesi 3. Fıkrası kapsamında danışman bu hakkını kullanabilir."
+  },
+  {
+    "Soru": "Derslerde kontenjan dolu uyarısı veriyor, dersi seçemiyorum, ne yapmalıyım?",
+    "Cevap": "Öncelikle alabileceğiniz diğer seçmeli veya grup dersini almaya çalışmalısınız. Tüm kontenjanlar doluysa danışmanınızla iletişime geçmeniz gerekmektedir."
+  },
+  {
+    "Soru": "Bir dönemde kaç AKTS'lik ders alma hakkım bulunmaktadır?",
+    "Cevap": "Bir dönemde 30 AKTS'lik ders alma hakkınız bulunmaktadır. Fakat başarı durumunuza göre ilave olarak 6, 10, 12 veya 15 AKTS oranlarında fazla ders alabilirsiniz."
+  },
+  {
+    "Soru": "Sistem giriş şifremi unuttuğum için sisteme giriş yapamıyorum. Ne yapmalıyım?",
+    "Cevap": "Eğitim gördüğünüz birime ait bölüm sekreterine ulaşarak, eğer sekreterinize ulaşamıyorsanız, 0 362 312 19 40 numaralı hattı arayarak şifrenizi sıfırlattıktan sonra ubs.omu.edu.tr adresinde yer alan İLK ŞİFRE OLUŞTUR linkini tıklayarak yeniden şifrenizi oluşturabilirsiniz"
+  },
+  {
+    "Soru": "Daha önce başarısız olduğum derslere devam zorunluluğum var mı?",
+    "Cevap": "Tekrar alınan derslerin devam koşulu yerine getirilmişse, yeniden devam koşulu aranmaz. Fakat başarısız olduğunuz seçmeli ders yerine yeni seçtiğiniz seçmeli derse devam şartınız doğacaktır."
+  },
+  {
+    "Soru": "Seçmeli dersten başarısız oldum. Yerine başka seçmeli ders seçebilir miyim?",
+    "Cevap": "Evet. UBS’den ders seçimi yaparken almak istediğiniz seçmeli dersi seçip yerine değiştirmek istediğiniz diğer seçmeli dersin yerine alıyorum işlemini yapmanız gerekmektedir. Yerine ders seçme işlemini yapmazsanız bir sonraki dönemde sorun yaşayabilirsiniz."
+  },
+  {
+    "Soru": "Hangi durumda üst sınıftan ders alabilirim?",
+    "Cevap": "Birinci yarıyıl sonundan itibaren; varsa öncelikle daha önce alıp başarısız olduğunuz dersleri ve öğrenim gördüğünüz yarıyıllarda almadığınız ders veya dersleri aldıktan sonra, her yarıyıl sonunda oluşan, genel not ortalamasına göre bir üst sınıftan kredi sınırları içerisinde kalarak ders alabilirsiniz."
+  },
+  {
+    "Soru": "Üniversitede toplam kaç profesör var?",
+    "Cevap": "Ondokuz Mayıs Üniversitesinde 560 profesör bulunmaktadır."
+  },
+  {
+    "Soru": "Üniversitede toplam kaç tane akademik personel var ?",
+    "Cevap": "Ondokuz Mayıs Üniversitesinde toplam 2497 akademik personel bulunmaktadır."
+  },
+  {
+    "Soru": "Üniversitede kaç tane Tubitak projesi var ?",
+    "Cevap": "2023 Yılı verilerine göre üniversitemizde toplam 42 adet Tubitak projesi bulunmaktadır."
+  },
+  {
+    "Soru": "Üniversitenin akademik personellerinin yaşları hakkında bilgi verir misin ?",
+    "Cevap": "Üniversitemizde 25 yaşından küçük olan 12 akademisyen, 26-30 yaşları arasında 339 akademisyen, 31-35 yaşları arasında 491 akademisyen, 36-40 yaşları arasında 379 akademisyen, 41-50 yaşları arasında 617 akademisyen ve 51 yaşının üzerinde olan 659 akademisyen bulunmaktadır."
+  },
+  {
+    "Soru": "Mühendislik fakültesinde kaç adet profesör var ?",
+    "Cevap": "Mühendislik Fakültesinde 42 profesör bulunmaktadır."
+  },
+  {
+    "Soru": "Mühendislik fakültesinde kaç tane akademik personel var ?",
+    "Cevap": "Mühendislik Fakültesinde toplam 157 akademik personel bulunmaktadır."
+  },
+  {
+    "Soru": "En çok profesörün olduğu bölüm ve fakülte hangileridir ?",
+    "Cevap": "Üniversitemizde en çok profesör bulunduran fakülte 170 profesörle Tıp fakültesidir. Dahili Tıp Bilimleri Bölümü ise en çok profesör bulunduran bölümdür. Bu bölümde 87 profesör bulunmaktadır."
+  },
+  {
+    "Soru": "Bilgisayar Mühendisliği bölümünde kaç profesör bulunmaktadır?",
+    "Cevap": "Bilgisayar Mühendisliği fakültesinde 1 profesör bulunmaktadır."
+  },
+  {
+    "Soru": "Akademik Personelin Yabancı Dil İstatistikleri hakkında bilgi verir misin ?",
+    "Cevap": "Üniversitemizde İngilizce yabancı dili bulunan 2059 akademisyen, Almanca dili bulunan 77 akademisyen, Fransızca dili bulunan 45 akademisyen, Arapça dili bulunan 42 akademisyen, Rusça dili bulunan 12 akademisyen, Farsça dili bulunan 6 akademisyen, İspanyolca dili bulunan 4 akademisyen ve İtalyanca dili bulunan 3 akademisyen vardır."
+  },
+  {
+    "Soru": "Akademik Personelin Cinsiyet İstatistikleri hakkında bilgi verir misin ?",
+    "Cevap": "Üniversitemizde Toplam 1120 kadın adakemisyen ve 1377 erkek akademisyen bulunmaktadır. Bu verileri oranlarsak üniversitemizde %45 oranında kadın akademisyen, %55 oranında erkek akademisyen bulunmaktadır."
+  },
+  {
+    "Soru": "Üniversitedeki profesörlerin cinsiyet istatistikleri hakkında bilgi verir misin?",
+    "Cevap": "Üniversitemizde Toplam 154 kadın profesör ve 406 erkek profesör bulunmaktadır. Bu verileri oranlarsak üniversitemizde %28 oranında kadın profesör, %72 oranında erkek profesör bulunmaktadır."
+  },
+  {
+    "Soru": "Üniversite öğrencilerinin cinsiyet istatistiklerini verir misin ?",
+    "Cevap": "Üniversitemizde Toplam 13886 kız lisans öğrencisi ve 13327 erkek lisans öğrencisi bulunmaktadır. Bu verileri oranlarsak üniversitemizde %51 oranında kız öğrenci, %49 oranında erkek öğrenci bulunmaktadır."
+  },
+  {
+    "Soru": "Mühendislik fakültesinde kaç öğrenci var ?",
+    "Cevap": "Mühendislik Fakültesinde lisans seviyesinde 3192 öğrenci bulunmaktadır."
+  },
+  {
+    "Soru": "Bilgisayar mühendisliği bölümünde kaç adet öğrenci bulunuyor ?",
+    "Cevap": "Bilgisayar Mühendisliği Bölümünde lisans seviyesinde 519 öğrenci bulunmaktadır."
+  },
+  {
+    "Soru": "Bilgisayar mühendisliği bölümünde kaç adet laboratuvar bulunmaktadır ?",
+    "Cevap": "Bilgisayar Mühendisliği bölümünün internet sitesinden alınan bilgilere göre bölümde 11 adet laboratuvar bulunmaktadır."
+  },
+  {
+    "Soru": "Bilgisayar mühendisliği için ders programını nereden bulabilirim ?",
+    "Cevap": "Bilgisayar Mühendisliği bölümünün ders programını https://bil-muhendislik.omu.edu.tr/tr/egitim/ders-programlari adresinde bulabilirsiniz."
+  },
+  {
+    "Soru": "Bilgisayar mühendisliği öğretim üyeleri kimlerdir ?",
+    "Cevap": "https://bil-muhendislik.omu.edu.tr/tr/personel/ogretim-uyeleri Adresinden bilgisayar mühendisliği öğretim üyelerini ve uzmanlık alanlarını inceleyebilirsiniz."
+  }
+]
