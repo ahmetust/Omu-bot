@@ -56,6 +56,7 @@ class ChatController extends GetxController {
         isDismissible: true,
         backgroundColor: Colors.red,
         dismissDirection: DismissDirection.horizontal, // Bu satırı ekleyin
+
       ));
     }
     chatTextController.clear();
