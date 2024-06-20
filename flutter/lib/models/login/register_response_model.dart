@@ -5,7 +5,7 @@ class RegisterResponse {
 
   factory RegisterResponse.fromJson(Map<String, dynamic> json) {
     return RegisterResponse(
-      id: json['id'],
+      id: json['user_id'],
     );
   }
 }

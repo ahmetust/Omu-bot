@@ -8,13 +8,13 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //final AuthController authController = Get.find();
+    final AuthController authController = Get.find();
 
     List<Widget> actions = [
       IconButton(
         icon: const Icon(Icons.logout, color: Colors.white),
         onPressed: () {
-          //authController.logout();
+          authController.logout();
         },
       ),
     ];

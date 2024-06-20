@@ -6,7 +6,7 @@ class LoginResponse {
 
   factory LoginResponse.fromJson(Map<String, dynamic> json) {
     return LoginResponse(
-      id: json['id'],
+      id: json['user_id'],
       role: json['role'],
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:omu_bot/views/admin/admin_view.dart';
 import 'package:omu_bot/views/chat/backup_view.dart';
 import 'package:omu_bot/views/chat/chat_page.dart';
 import 'package:omu_bot/views/login/login_view.dart';
@@ -22,14 +23,14 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'OmuBOT',
-      initialRoute: '/home',
+      initialRoute: '/login',
       getPages: [
         GetPage(name: '/login', page: () => LoginView()),
         GetPage(name: '/register', page: () => RegisterView()),
         GetPage(name: '/home', page: () => HomeView()),
         GetPage(name: '/chat', page: () => ChatPage()),
-        GetPage(name: '/backup', page: () => ChatPageBackup())
-        //GetPage(name: '/admin', page: () => AdminView()),
+        GetPage(name: '/backup', page: () => ChatPageBackup()),
+        GetPage(name: '/admin', page: () => AdminView()),
       ],
     );
   }

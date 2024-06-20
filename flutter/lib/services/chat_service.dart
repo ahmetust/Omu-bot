@@ -3,7 +3,6 @@ import 'dart:convert';
 
 class ChatService {
   final String apiUrl = 'http://34.89.5.66:5000/soru';
-  //final String apiUrl = 'http://10.56.200.147:5000/soru';
 
   Future<String> sendQuestion(String question) async {
     final response = await http.post(
