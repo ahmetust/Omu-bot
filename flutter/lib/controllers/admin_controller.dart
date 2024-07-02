@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:omu_bot/controllers/auth_controller.dart';
 import '../models/admin/add_question/add_question_request_model.dart';
 import '../models/admin/category_stats/category_stats_model.dart';
 import '../models/admin/list/message_list_request_model.dart';
+import '../models/user/user.dart';
 import '../services/admin_service.dart';
 
 class AdminController extends GetxController {
@@ -10,14 +12,18 @@ class AdminController extends GetxController {
   var isLoading = false.obs;
   var errorMessage = ''.obs;
   var categoryStats = <CategoryStatsModel>[].obs;
-  var selectedPage = 'stats'.obs;
+  var selectedPage = 'manage'.obs;
   final AdminService adminService = AdminService();
+  var selectedCategory = ''.obs; // Selected category name
+  var selectedCategoryId = 0.obs; // Selected category ID
+
 
   @override
   void onInit() {
     super.onInit();
     fetchMessages();
     fetchCategoryStats();
+
   }
 
   void setSelectedPage(String view) {

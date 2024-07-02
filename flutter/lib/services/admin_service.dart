@@ -6,7 +6,7 @@ import '../models/admin/category_stats/category_stats_model.dart';
 import '../models/admin/list/message_list_request_model.dart';
 
 class AdminService {
-  final String baseUrl = 'http://localhost:3300';
+  final String baseUrl = 'http://192.168.16.237:3300';
 
   Future<List<MessageListRequestModel>> fetchMessages() async {
     final response = await http.get(Uri.parse('$baseUrl/list-messages'));

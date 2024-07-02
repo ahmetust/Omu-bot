@@ -3,18 +3,16 @@ import 'package:get/get.dart';
 import 'package:omu_bot/controllers/auth_controller.dart';
 import 'package:omu_bot/widgets/app_bar.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends GetView<AuthController> {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final AuthController authController = Get.find();
-
     List<Widget> actions = [
       IconButton(
         icon: const Icon(Icons.logout, color: Colors.white),
         onPressed: () {
-          authController.logout();
+          controller.logout(); // GetView sayesinde controller doğrudan kullanılabilir
         },
       ),
     ];
@@ -30,29 +28,28 @@ class HomeView extends StatelessWidget {
               width: 150,
               height: 150,
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Hoş geldiniz!',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               'Yapay zekâ destekli chatbot ile konuşmaya başlamak için aşağıdaki butona dokunun.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Get.toNamed('/chat');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.indigo,// Butonun arka plan rengi
+                backgroundColor: Colors.indigo, // Butonun arka plan rengi
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30), // Butonun kenar yuvarlaklığı
                 ),
                 elevation: 5, // Butonun gölge yüksekliği
-                 // Buton metni rengi
               ),
               child: const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -68,7 +65,7 @@ class HomeView extends StatelessWidget {
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

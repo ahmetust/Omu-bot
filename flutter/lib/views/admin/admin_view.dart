@@ -1,31 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controllers/admin_controller.dart';
-import 'stats_view.dart'; // Yeni import
-import 'manage_questions_view.dart'; // Yeni import
+import '../../widgets/app_bar.dart';
+import 'stats_view.dart';
+import 'manage_questions_view.dart';
 
-class AdminView extends StatelessWidget {
-  final AdminController adminController = Get.put(AdminController());
+class AdminView extends GetView<AdminController> {
+  final Map<String, Widget Function()> pages = {
+    'stats': () => StatsPage(),
+    'manage': () => ManageQuestionsPage(),
+  };
 
   AdminView({super.key});
-
-  final Map<String, Widget Function()> pages = {
-    'stats': () => buildStatsPage(),
-    'manage': () => buildManageQuestionsPage(),
-  };
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Admin Paneli'),
+      appBar: const CommonAppBar( // CommonAppBar'ı kullanarak appBar'ı güncelliyoruz
+        title: 'Admin Paneli', // Başlık parametresini gönderiyoruz
       ),
       drawer: Drawer(
         child: ListView(
           children: [
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                gradient: LinearGradient(
+                  begin: Alignment.topRight, // Başlangıç yönü
+                  end: Alignment.bottomRight, // Bitiş yönü
+                  colors: [
+                    Color(0xFCC53C26),
+                    Color(0xFF0D40E5),
+                  ],
+                ),
               ),
               child: Text(
                 'Admin Paneli',
@@ -38,22 +44,22 @@ class AdminView extends StatelessWidget {
             ListTile(
               title: Text('İstatistikler'),
               onTap: () {
-                adminController.setSelectedPage('stats');
-                Navigator.pop(context); // Close the drawer
+                controller.setSelectedPage('stats');
+                Navigator.pop(context); // Drawer'ı kapat
               },
             ),
             ListTile(
               title: Text('Soru Ekle/Sil'),
               onTap: () {
-                adminController.setSelectedPage('manage');
-                Navigator.pop(context); // Close the drawer
+                controller.setSelectedPage('manage');
+                Navigator.pop(context); // Drawer'ı kapat
               },
             ),
           ],
         ),
       ),
       body: Obx(() {
-        return pages[adminController.selectedPage.value]!();
+        return pages[controller.selectedPage.value]!();
       }),
     );
   }

@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:omu_bot/controllers/chat_controller.dart';
 import 'package:get/get.dart';
+import 'package:omu_bot/controllers/chat_controller.dart';
 import 'package:omu_bot/widgets/app_bar.dart';
 import 'package:gradient_borders/gradient_borders.dart';
+import 'package:omu_bot/widgets/clickable_text.dart';
 import '../../widgets/progress_indicator.dart'; // TypingIndicator yerine kullanılan ilgili bileşeni ekleyin
 
-class ChatPage extends StatefulWidget {
-  const ChatPage({super.key});
-
-  @override
-  ChatPageState createState() => ChatPageState();
-}
-
-class ChatPageState extends State<ChatPage> {
-  final ChatController _controller = Get.put(ChatController());
+class ChatPage extends GetView<ChatController> {
+  ChatPage({super.key});
 
   List<Color> senderColors = [
     const Color(0xFCE62808),
@@ -58,49 +52,47 @@ class ChatPageState extends State<ChatPage> {
               ),
             ),
           ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height - 110,
-            child: Obx(() => ListView.builder(
-              itemCount: _controller.messages.length + 1,
-              shrinkWrap: false,
-              controller: _controller.scrollController,
-              padding: const EdgeInsets.only(top: 10, bottom: 10),
-              physics: const BouncingScrollPhysics(),
-              itemBuilder: (context, index) {
-                if (index == _controller.messages.length) {
-                  // Show loading indicator with bot logo at the bottom
-                  return Obx(() {
-                    return _controller.isLoading.value
-                        ? Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            'assets/images/chat_bot_logo_2.png',
-                            width: 50,
-                            height: 50,
-                          ),
-                          const SizedBox(width: 8.0),
-                          const TypingIndicator(),
-                        ],
-                      ),
-                    )
-                        : const SizedBox.shrink();
-                  });
-                } else {
-                  return Container(
+          Obx(() => ListView.builder(
+            itemCount: controller.messages.length + 1,
+            controller: controller.scrollController,
+            padding: const EdgeInsets.only(top: 10, bottom: 70),
+            physics: const BouncingScrollPhysics(),
+            itemBuilder: (context, index) {
+              if (index == controller.messages.length) {
+                // Show loading indicator with bot logo at the bottom
+                return Obx(() {
+                  return controller.isLoading.value
+                      ? Padding(
                     padding: const EdgeInsets.all(10),
-                    child: Align(
-                      alignment: _controller.messages[index].isSender
-                          ? Alignment.topRight
-                          : Alignment.topLeft,
-                      child: Row(
-                        mainAxisAlignment: _controller.messages[index].isSender
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          'assets/images/chat_bot_logo_2.png',
+                          width: 50,
+                          height: 50,
+                        ),
+                        const SizedBox(width: 8.0),
+                        const TypingIndicator(), // Buraya uygun bileşeni ekleyin
+                      ],
+                    ),
+                  )
+                      : const SizedBox.shrink();
+                });
+              } else {
+                return Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    crossAxisAlignment: controller.messages[index].isSender
+                        ? CrossAxisAlignment.end
+                        : CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: controller.messages[index].isSender
                             ? MainAxisAlignment.end
                             : MainAxisAlignment.start,
                         children: [
-                          if (!_controller.messages[index].isSender)
+                          if (!controller.messages[index].isSender)
                             Padding(
                               padding: const EdgeInsets.only(right: 8.0),
                               child: Image.asset(
@@ -126,7 +118,7 @@ class ChatPageState extends State<ChatPage> {
                                 gradient: LinearGradient(
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
-                                  colors: _controller.messages[index].isSender
+                                  colors: controller.messages[index].isSender
                                       ? senderColors
                                       : responseColors,
                                 ),
@@ -137,9 +129,9 @@ class ChatPageState extends State<ChatPage> {
                                 children: [
                                   GestureDetector(
                                     onTap: () =>
-                                        _controller.speakMessage(_controller.messages[index]),
+                                        controller.speakMessage(controller.messages[index]),
                                     child: Obx(() => Icon(
-                                      _controller.messages[index].isSpeaking.value
+                                      controller.messages[index].isSpeaking.value
                                           ? Icons.volume_off
                                           : Icons.volume_up,
                                       color: Colors.white,
@@ -147,20 +139,13 @@ class ChatPageState extends State<ChatPage> {
                                   ),
                                   const SizedBox(width: 8.0),
                                   Expanded(
-                                    child: Text(
-                                      _controller.messages[index].message,
-                                      style: const TextStyle(
-                                        fontSize: 15,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
+                                      child: ClickableText(text: controller.messages[index].message)
                                   ),
                                 ],
                               ),
                             ),
                           ),
-                          if (_controller.messages[index].isSender)
+                          if (controller.messages[index].isSender)
                             Padding(
                               padding: const EdgeInsets.only(left: 8.0),
                               child: Image.asset(
@@ -171,12 +156,26 @@ class ChatPageState extends State<ChatPage> {
                             ),
                         ],
                       ),
-                    ),
-                  );
-                }
-              },
-            )),
-          ),
+                      if (!controller.messages[index].isSender)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0, left: 50.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: TextButton.icon(
+                              onPressed: () {
+                                //controller.reportMessage(index);
+                              },
+                              icon: Icon(Icons.report, color: Colors.red),
+                              label: Text('Rapor Et', style: TextStyle(color: Colors.red)),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                );
+              }
+            },
+          )),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -203,10 +202,10 @@ class ChatPageState extends State<ChatPage> {
                             contentPadding: EdgeInsets.all(8.0),
                           ),
                           keyboardType: TextInputType.text,
-                          controller: _controller.chatTextController,
+                          controller: controller.chatTextController,
                           onEditingComplete: () async =>
-                          await _controller.sendQuestion(
-                              _controller.chatTextController.value.text),
+                          await controller.sendQuestion(
+                              controller.chatTextController.value.text),
                         ),
                       ),
                     ),
@@ -214,12 +213,12 @@ class ChatPageState extends State<ChatPage> {
                   const SizedBox(width: 4.0),
                   IconButton(
                     icon: Obx(() =>
-                        Icon(_controller.isListening.value ? Icons.mic : Icons.mic_none)),
-                    onPressed: _controller.startListening,
+                        Icon(controller.isListening.value ? Icons.mic : Icons.mic_none)),
+                    onPressed: controller.startListening,
                   ),
                   MaterialButton(
                     onPressed: () async =>
-                    await _controller.sendQuestion(_controller.chatTextController.value.text),
+                    await controller.sendQuestion(controller.chatTextController.value.text),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
                     padding: const EdgeInsets.all(0.0),

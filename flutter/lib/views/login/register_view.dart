@@ -3,19 +3,16 @@ import 'package:get/get.dart';
 import 'package:omu_bot/controllers/auth_controller.dart';
 import 'package:omu_bot/widgets/app_bar.dart';
 
-class RegisterView extends StatelessWidget {
-
+class RegisterView extends GetView<AuthController> {
   RegisterView({super.key});
-  final AuthController authController = Get.put(AuthController());
+
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CommonAppBar(title: "Register",),
+      appBar: const CommonAppBar(title: "Register"),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -26,13 +23,13 @@ class RegisterView extends StatelessWidget {
             ),
             TextField(
               controller: passwordController,
-              decoration: const  InputDecoration(labelText: 'Password'),
+              decoration: const InputDecoration(labelText: 'Password'),
               obscureText: true,
             ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                authController.register(emailController.text, passwordController.text);
+                controller.register(emailController.text, passwordController.text);
               },
               child: Text('Register'),
             ),

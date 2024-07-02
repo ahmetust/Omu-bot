@@ -1,15 +1,20 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+//import 'package:omu_bot/controllers/auth_controller.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:omu_bot/services/chat_service.dart';
 import 'package:omu_bot/models/chat/chat_massage.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
+import '../models/user/user.dart';
+
 
 
 class ChatController extends GetxController {
   final ChatService _chatService = ChatService();
+  late User? user;
+
   var messages = <ChatMessage>[].obs;
   var isLoading = false.obs;
 

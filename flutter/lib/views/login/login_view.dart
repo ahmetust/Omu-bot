@@ -3,19 +3,16 @@ import 'package:get/get.dart';
 import 'package:omu_bot/controllers/auth_controller.dart';
 import 'package:omu_bot/widgets/app_bar.dart';
 
-class LoginView extends StatelessWidget {
-
+class LoginView extends GetView<AuthController> {
   LoginView({super.key});
-  final AuthController authController = Get.put(AuthController());
+
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CommonAppBar(title: "Login",),
+      appBar: const CommonAppBar(title: "Login"),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -32,7 +29,7 @@ class LoginView extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                authController.login(emailController.text, passwordController.text);
+                controller.login(emailController.text, passwordController.text);
               },
               child: Text('Login'),
             ),

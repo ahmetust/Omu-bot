@@ -6,8 +6,7 @@ import 'package:omu_bot/models/login/register_request_model.dart';
 import 'package:omu_bot/models/login/register_response_model.dart';
 
 class AuthService {
-  //final String baseUrl = 'http://10.56.200.147:3300';
-  final String baseUrl = 'http://localhost:3300';
+  final String baseUrl = 'http://192.168.16.237:3300';
 
   Future<LoginResponse?> login(String email, String password) async {
     final response = await http.post(
@@ -19,7 +18,8 @@ class AuthService {
     if (response.statusCode == 200) {
       return LoginResponse.fromJson(jsonDecode(response.body));
     } else {
-      return null;
+      final errorResponse = jsonDecode(response.body);
+      throw Exception(errorResponse['message'] ?? 'Oturum açma işlemi başarısız');
     }
   }
 
@@ -33,7 +33,8 @@ class AuthService {
     if (response.statusCode == 201) {
       return RegisterResponse.fromJson(jsonDecode(response.body));
     } else {
-      return null;
+      final errorResponse = jsonDecode(response.body);
+      throw Exception(errorResponse['message'] ?? 'Kayıt olma işlemi başarısız');
     }
   }
 }

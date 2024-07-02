@@ -1,11 +1,11 @@
 class RegisterResponse {
-  final int id;
+  final String message;
 
-  RegisterResponse({required this.id});
+  RegisterResponse({required this.message});
 
   factory RegisterResponse.fromJson(Map<String, dynamic> json) {
     return RegisterResponse(
-      id: json['user_id'],
+      message: json['message'] ?? '',
     );
   }
 }
