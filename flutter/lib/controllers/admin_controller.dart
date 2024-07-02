@@ -1,29 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:omu_bot/controllers/auth_controller.dart';
 import '../models/admin/add_question/add_question_request_model.dart';
 import '../models/admin/category_stats/category_stats_model.dart';
 import '../models/admin/list/message_list_request_model.dart';
-import '../models/user/user.dart';
+import '../models/admin/edit_question/edit_question_request.dart';
+import 'package:get_storage/get_storage.dart';
 import '../services/admin_service.dart';
 
 class AdminController extends GetxController {
   var messages = <MessageListRequestModel>[].obs;
+  var filteredMessages = <MessageListRequestModel>[].obs; // Filtrelenmiş mesajlar
   var isLoading = false.obs;
   var errorMessage = ''.obs;
   var categoryStats = <CategoryStatsModel>[].obs;
   var selectedPage = 'manage'.obs;
-  final AdminService adminService = AdminService();
   var selectedCategory = ''.obs; // Selected category name
   var selectedCategoryId = 0.obs; // Selected category ID
 
+  final AdminService adminService = AdminService();
+  final storage = GetStorage();
+  late dynamic user;
 
   @override
   void onInit() {
     super.onInit();
     fetchMessages();
     fetchCategoryStats();
-
+    user = storage.read('user');
   }
 
   void setSelectedPage(String view) {
@@ -35,6 +38,7 @@ class AdminController extends GetxController {
     try {
       var fetchedMessages = await adminService.fetchMessages();
       messages.assignAll(fetchedMessages);
+      filteredMessages.assignAll(fetchedMessages); // Filtrelenmiş mesajları da güncelle
     } catch (e) {
       showErrorSnackbar(e.toString());
     } finally {
@@ -52,6 +56,24 @@ class AdminController extends GetxController {
         categoryId: categoryId,
       );
       await adminService.addQuestion(request);
+      fetchMessages();
+    } catch (e) {
+      showErrorSnackbar(e.toString());
+    } finally {
+      isLoading.value = false;
+    }
+  }
+
+  void editQuestion(int messageId, String question, String answer, int categoryId) async {
+    isLoading.value = true;
+    try {
+      EditQuestionRequest request = EditQuestionRequest(
+        messageId: messageId,
+        question: question,
+        answer: answer,
+        categoryId: categoryId,
+      );
+      await adminService.editQuestion(request);
       fetchMessages();
     } catch (e) {
       showErrorSnackbar(e.toString());
@@ -84,7 +106,16 @@ class AdminController extends GetxController {
     }
   }
 
-
+  void filterQuestions(String query) {
+    if (query.isEmpty) {
+      filteredMessages.assignAll(messages);
+    } else {
+      var filtered = messages.where((message) =>
+      message.question.toLowerCase().contains(query.toLowerCase()) ||
+          message.answer.toLowerCase().contains(query.toLowerCase())).toList();
+      filteredMessages.assignAll(filtered);
+    }
+  }
 
   void showErrorSnackbar(String message) {
     Get.snackbar(
@@ -94,5 +125,21 @@ class AdminController extends GetxController {
       backgroundColor: Colors.red,
       colorText: Colors.white,
     );
+  }
+
+  void logout() async {
+    try {
+      await storage.erase(); // Depolama işlemini kontrol et
+      user = null; // Kullanıcı verilerini sıfırla
+      Get.offAllNamed('/login'); // Kullanıcıyı login sayfasına yönlendir
+    } catch (e) {
+      Get.snackbar(
+        'Hata',
+        'Çıkış yapma işlemi başarısız: $e',
+        backgroundColor: Colors.red,
+        colorText: Colors.white,
+        snackPosition: SnackPosition.BOTTOM,
+      );
+    }
   }
 }

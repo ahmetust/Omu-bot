@@ -11,12 +11,10 @@ class AddQuestionRequest {
     required this.categoryId,
   });
 
-  Map<String, dynamic> toJson() {
-    return {
-      "user_id": userId,
-      "question": question,
-      "answer": answer,
-      "category_id": categoryId,
-    };
-  }
+  Map<String, dynamic> toJson() => {
+    'user_id': userId,
+    'question': question,
+    'answer': answer,
+    'category_id': categoryId,
+  };
 }

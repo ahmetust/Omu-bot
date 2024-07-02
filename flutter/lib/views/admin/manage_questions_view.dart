@@ -9,13 +9,16 @@ class ManageQuestionsPage extends GetView<AdminController> {
 
   @override
   Widget build(BuildContext context) {
+    final storage = GetStorage();
+    final user = storage.read('user');
     final TextEditingController _searchController = TextEditingController();
     var size = MediaQuery.of(context).size;
 
-    void _showAddQuestionDialog() {
-      final TextEditingController _questionController = TextEditingController();
-      final TextEditingController _answerController = TextEditingController();
-      final TextEditingController _userIdController = TextEditingController();
+    void _showAddOrEditQuestionDialog({bool isEdit = false, int? messageId, String? initialQuestion, String? initialAnswer, String? initialCategory}) {
+      final TextEditingController _questionController = TextEditingController(text: initialQuestion);
+      final TextEditingController _answerController = TextEditingController(text: initialAnswer);
+      String selectedCategory = initialCategory ?? '';
+      int selectedCategoryId = controller.categoryStats.firstWhere((cat) => cat.categoryName == initialCategory, orElse: () => CategoryStatsModel(categoryName: '', categoryId: 0, questionCount:  0)).categoryId;
 
       showDialog(
         context: context,
@@ -38,16 +41,17 @@ class ManageQuestionsPage extends GetView<AdminController> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'Soru ekle',
+                          isEdit ? 'Soruyu Düzenle' : 'Soru Ekle',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                             color: Colors.blueAccent,
                           ),
-                        ), // Spacer between 'Kategori Ekle' and 'Soru Ekle'
+                        ),
                         SizedBox(
-                          width: size.width * 0.4, // Adjust the width as needed
+                          width: size.width * 0.4,
                           child: DropdownButtonFormField<String>(
+                            value: selectedCategory.isEmpty ? null : selectedCategory,
                             items: controller.categoryStats.map((category) {
                               return DropdownMenuItem<String>(
                                 value: category.categoryName,
@@ -56,10 +60,9 @@ class ManageQuestionsPage extends GetView<AdminController> {
                             }).toList(),
                             hint: Text('Kategori Seç'),
                             onChanged: (value) {
-                              // Ensure value is not null
                               if (value != null) {
-                                controller.selectedCategory.value = value;
-                                controller.selectedCategoryId.value = controller.categoryStats.firstWhere((cat) => cat.categoryName == value).categoryId;
+                                selectedCategory = value;
+                                selectedCategoryId = controller.categoryStats.firstWhere((cat) => cat.categoryName == value).categoryId;
                               }
                             },
                             decoration: InputDecoration(
@@ -70,11 +73,6 @@ class ManageQuestionsPage extends GetView<AdminController> {
                       ],
                     ),
                     SizedBox(height: 20),
-
-                   /* SizedBox(height: 10),
-                    _buildInputLabel('User ID'),
-                    _buildTextField(_userIdController, TextInputType.number),
-                    SizedBox(height: 10),*/
                     _buildInputLabel('Soru'),
                     _buildQuestionTextField(_questionController),
                     SizedBox(height: 10),
@@ -82,7 +80,7 @@ class ManageQuestionsPage extends GetView<AdminController> {
                     _buildQuestionTextField(_answerController),
                     SizedBox(height: 20),
                     ButtonBar(
-                      alignment: MainAxisAlignment.spaceBetween, // Align buttons to the right
+                      alignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
                           width: size.width * 0.3,
@@ -99,16 +97,20 @@ class ManageQuestionsPage extends GetView<AdminController> {
                             ),
                             child: const Text('Vazgeç', style: TextStyle(color: Colors.white)),
                           ),
-                        ), // Spacer between buttons
+                        ),
                         SizedBox(
                           width: size.width * 0.3,
                           child: ElevatedButton(
                             onPressed: () {
-                              final userId = int.tryParse(_userIdController.text) ?? 0;
+                              final int userId = user['id'];
                               final question = _questionController.text;
                               final answer = _answerController.text;
-                              final categoryId = controller.selectedCategoryId.value;
-                              controller.addQuestion(userId, question, answer, categoryId);
+                              final categoryId = selectedCategoryId;
+                              if (isEdit && messageId != null) {
+                                controller.editQuestion(messageId, question, answer, categoryId);
+                              } else {
+                                controller.addQuestion(userId, question, answer, categoryId);
+                              }
                               Navigator.of(context).pop();
                             },
                             style: ElevatedButton.styleFrom(
@@ -118,7 +120,7 @@ class ManageQuestionsPage extends GetView<AdminController> {
                               ),
                               backgroundColor: Colors.blueAccent,
                             ),
-                            child: const Text('Oluştur', style: TextStyle(color: Colors.white)),
+                            child: Text(isEdit ? 'Güncelle' : 'Oluştur', style: TextStyle(color: Colors.white)),
                           ),
                         ),
                       ],
@@ -132,6 +134,10 @@ class ManageQuestionsPage extends GetView<AdminController> {
       );
     }
 
+    void _filterQuestions(String query) {
+      controller.filterQuestions(query);
+    }
+
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: SingleChildScrollView(
@@ -143,12 +149,12 @@ class ManageQuestionsPage extends GetView<AdminController> {
               children: [
                 SizedBox(
                   width: size.width * 0.6,
-                  child: _buildSearchField(_searchController),
+                  child: _buildSearchField(_searchController, _filterQuestions),
                 ),
                 SizedBox(
                   width: 120,
                   child: ElevatedButton(
-                    onPressed: _showAddQuestionDialog,
+                    onPressed: () => _showAddOrEditQuestionDialog(),
                     child: Text(
                       'Soru Ekle',
                       style: TextStyle(
@@ -178,9 +184,9 @@ class ManageQuestionsPage extends GetView<AdminController> {
               }
               return ListView.builder(
                 shrinkWrap: true,
-                itemCount: controller.messages.length,
+                itemCount: controller.filteredMessages.length,
                 itemBuilder: (context, index) {
-                  final message = controller.messages[index];
+                  final message = controller.filteredMessages[index];
                   return Card(
                     margin: EdgeInsets.symmetric(vertical: 5),
                     shape: RoundedRectangleBorder(
@@ -193,6 +199,13 @@ class ManageQuestionsPage extends GetView<AdminController> {
                           IconButton(
                             icon: Icon(Icons.edit_rounded, color: Colors.redAccent),
                             onPressed: () {
+                              _showAddOrEditQuestionDialog(
+                                isEdit: true,
+                                messageId: message.messageId,
+                                initialQuestion: message.question,
+                                initialAnswer: message.answer,
+                                initialCategory: message.category,
+                              );
                             },
                           ),
                           IconButton(
@@ -262,15 +275,23 @@ class ManageQuestionsPage extends GetView<AdminController> {
     );
   }
 
-  Widget _buildSearchField(TextEditingController controller) {
+  Widget _buildSearchField(TextEditingController controller, void Function(String) onChanged) {
     return TextField(
       controller: controller,
+      onChanged: onChanged,
       decoration: InputDecoration(
         labelText: 'Soru Ara',
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
         prefixIcon: Icon(Icons.search),
+        suffixIcon: IconButton(
+          icon: Icon(Icons.clear),
+          onPressed: () {
+            controller.clear();
+            onChanged('');
+          },
+        ),
       ),
     );
   }

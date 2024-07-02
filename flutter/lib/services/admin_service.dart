@@ -4,6 +4,8 @@ import '../models/admin/add_question/add_question_request_model.dart';
 import '../models/admin/add_question/add_quetion_response_model.dart';
 import '../models/admin/category_stats/category_stats_model.dart';
 import '../models/admin/list/message_list_request_model.dart';
+import '../models/admin/edit_question/edit_question_request.dart';
+import '../models/admin/edit_question/edit_question_response.dart';
 
 class AdminService {
   final String baseUrl = 'http://192.168.16.237:3300';
@@ -32,6 +34,22 @@ class AdminService {
       return AddQuestionResponse.fromJson(jsonDecode(response.body));
     } else {
       throw Exception('Failed to add question');
+    }
+  }
+
+  Future<EditQuestionResponse> editQuestion(EditQuestionRequest request) async {
+    final response = await http.post(
+      Uri.parse('$baseUrl/edit-message'),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      body: jsonEncode(request.toJson()),
+    );
+
+    if (response.statusCode == 200) {
+      return EditQuestionResponse.fromJson(jsonDecode(response.body));
+    } else {
+      throw Exception('Failed to edit question');
     }
   }
 

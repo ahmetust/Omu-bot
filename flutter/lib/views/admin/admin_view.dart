@@ -15,9 +15,19 @@ class AdminView extends GetView<AdminController> {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> actions = [
+      IconButton(
+        icon: const Icon(Icons.logout, color: Colors.white),
+        onPressed: () {
+          controller.logout(); // GetView sayesinde controller doğrudan kullanılabilir
+        },
+      ),
+    ];
+
     return Scaffold(
-      appBar: const CommonAppBar( // CommonAppBar'ı kullanarak appBar'ı güncelliyoruz
-        title: 'Admin Paneli', // Başlık parametresini gönderiyoruz
+      appBar:  CommonAppBar( // CommonAppBar'ı kullanarak appBar'ı güncelliyoruz
+        title: 'Admin Paneli',
+        actions: actions,
       ),
       drawer: Drawer(
         child: ListView(

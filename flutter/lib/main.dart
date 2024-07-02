@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       initialBinding: AuthBinding(),
       getPages: [
-        GetPage(name: '/login', page: () => LoginView(), binding: AuthBinding()),
-        GetPage(name: '/register', page: () => RegisterView(), binding: AuthBinding()),
+        GetPage(name: '/login', page: () => LoginView(), binding: AuthBinding(), middlewares: [AuthMiddleware()]),
+        GetPage(name: '/register', page: () => RegisterView(), binding: AuthBinding(), middlewares: [AuthMiddleware()]),
         GetPage(name: '/home', page: () => const HomeView(),binding: AuthBinding(), middlewares: [AuthMiddleware()]),
         GetPage(name: '/chat', page: () => ChatPage(), binding: ChatBinding(), middlewares: [AuthMiddleware()]),
         GetPage(name: '/admin', page: () => AdminView(), binding: AdminBinding(), middlewares: [AuthMiddleware()]),
