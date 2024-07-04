@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:fl_chart/fl_chart.dart';
+//import 'package:lottie/lottie.dart';
 import '../../controllers/admin_controller.dart';
 import '../../models/admin/category_stats/category_stats_model.dart';
 
@@ -15,13 +16,29 @@ class StatsPage extends GetView<AdminController> {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Obx(() {
-        if (controller.isLoading.value) {
-          return Center(child: CircularProgressIndicator());
+        if (controller.categoryStats.isEmpty && controller.isLoading.value) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
         } else if (controller.errorMessage.isNotEmpty) {
           return Center(
             child: Text(
               controller.errorMessage.value,
               style: TextStyle(color: Colors.red),
+            ),
+          );
+        } else if (controller.categoryStats.isEmpty) {
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Görüntülenecek veri bulunmamaktadır"),
+                SizedBox(height: 20),
+                Text(
+                  'Görüntülenecek istatistik yok',
+                  style: TextStyle(fontSize: 18, color: Colors.grey),
+                ),
+              ],
             ),
           );
         } else {
@@ -86,6 +103,10 @@ class StatsPage extends GetView<AdminController> {
   }
 
   List<PieChartSectionData> _buildPieChartSections(List<CategoryStatsModel> categoryStats) {
+    if (categoryStats.isEmpty) {
+      return [];
+    }
+
     List<Color> colors = [
       Colors.blue,
       Colors.green,
@@ -117,6 +138,10 @@ class StatsPage extends GetView<AdminController> {
   }
 
   List<Widget> _buildLegend(List<CategoryStatsModel> categoryStats) {
+    if (categoryStats.isEmpty) {
+      return [];
+    }
+
     List<Color> colors = [
       Colors.blue,
       Colors.green,

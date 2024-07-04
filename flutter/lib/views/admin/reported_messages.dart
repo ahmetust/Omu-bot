@@ -4,8 +4,8 @@ import 'package:get_storage/get_storage.dart';
 import '../../controllers/admin_controller.dart';
 import '../../models/admin/category_stats/category_stats_model.dart';
 
-class ManageQuestionsPage extends GetView<AdminController> {
-  const ManageQuestionsPage({super.key});
+class ReportedMessagesPage extends GetView<AdminController> {
+  const ReportedMessagesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,11 @@ class ManageQuestionsPage extends GetView<AdminController> {
     final TextEditingController _searchController = TextEditingController();
     var size = MediaQuery.of(context).size;
 
-    void _showAddOrEditQuestionDialog({bool isEdit = false, int? messageId, String? initialQuestion, String? initialAnswer, String? initialCategory}) {
+    void _showEditQuestionDialog({bool isEdit = false, String? reportMessage, int? messageId, String? initialQuestion, String? initialAnswer, String? initialCategory}) {
       final TextEditingController _questionController = TextEditingController(text: initialQuestion);
       final TextEditingController _answerController = TextEditingController(text: initialAnswer);
       String selectedCategory = initialCategory ?? '';
-      int selectedCategoryId = controller.categoryStats.firstWhere((cat) => cat.categoryName == initialCategory, orElse: () => CategoryStatsModel(categoryName: '', categoryId: 0, questionCount:  0)).categoryId;
+      int selectedCategoryId = controller.categoryStats.firstWhere((cat) => cat.categoryName == initialCategory, orElse: () => CategoryStatsModel(categoryName: '', categoryId: 0, questionCount: 0)).categoryId;
 
       showDialog(
         context: context,
@@ -41,7 +41,7 @@ class ManageQuestionsPage extends GetView<AdminController> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          isEdit ? 'Düzenle' : 'Soru Ekle',
+                          'Düzenle',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -72,6 +72,9 @@ class ManageQuestionsPage extends GetView<AdminController> {
                         ),
                       ],
                     ),
+                    SizedBox(height: 20),
+                    _buildInputLabel('Rapor Mesajı'),
+                    Text(reportMessage ?? '', style: TextStyle(fontWeight: FontWeight.w300, color: Colors.grey)),
                     SizedBox(height: 20),
                     _buildInputLabel('Soru'),
                     _buildQuestionTextField(_questionController),
@@ -106,10 +109,8 @@ class ManageQuestionsPage extends GetView<AdminController> {
                               final question = _questionController.text;
                               final answer = _answerController.text;
                               final categoryId = selectedCategoryId;
-                              if (isEdit && messageId != null) {
+                              if (messageId != null) {
                                 controller.editQuestion(messageId, question, answer, categoryId);
-                              } else {
-                                controller.addQuestion(userId, question, answer, categoryId);
                               }
                               Navigator.of(context).pop();
                             },
@@ -120,7 +121,7 @@ class ManageQuestionsPage extends GetView<AdminController> {
                               ),
                               backgroundColor: Colors.blueAccent,
                             ),
-                            child: Text(isEdit ? 'Güncelle' : 'Oluştur', style: TextStyle(color: Colors.white)),
+                            child: const Text('Güncelle', style: TextStyle(color: Colors.white)),
                           ),
                         ),
                       ],
@@ -134,98 +135,81 @@ class ManageQuestionsPage extends GetView<AdminController> {
       );
     }
 
-    void _filterQuestions(String query) {
-      controller.filterQuestions(query);
-    }
-
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                width: size.width * 0.6,
-                child: _buildSearchField(_searchController, _filterQuestions),
-              ),
-              SizedBox(
-                width: 120,
-                child: ElevatedButton(
-                  onPressed: () => _showAddOrEditQuestionDialog(),
-                  child: Text(
-                    'Soru Ekle',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(vertical: 15),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    backgroundColor: Colors.blueAccent,
-                  ),
-                ),
-              ),
-            ],
-          ),
           SizedBox(height: 20),
           Obx(() {
             if (controller.isLoading.value) {
               return Center(child: CircularProgressIndicator());
             }
             if (controller.errorMessage.isNotEmpty) {
-              WidgetsBinding.instance.addPostFrameCallback((_) {
+              WidgetsBinding.instance?.addPostFrameCallback((_) {
                 Get.snackbar('Error', controller.errorMessage.value, snackPosition: SnackPosition.BOTTOM);
               });
             }
             return Expanded(
               child: ListView.builder(
-                itemCount: controller.filteredMessages.length,
+                itemCount: controller.reportedMessages.length,
                 itemBuilder: (context, index) {
-                  final message = controller.filteredMessages[index];
-                  return Card(
-                    margin: EdgeInsets.symmetric(vertical: 5),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: ListTile(
-                      trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          IconButton(
-                            icon: Icon(Icons.edit_rounded, color: Colors.redAccent),
-                            onPressed: () {
-                              _showAddOrEditQuestionDialog(
-                                isEdit: true,
-                                messageId: message.messageId,
-                                initialQuestion: message.question,
-                                initialAnswer: message.answer,
-                                initialCategory: message.category,
-                              );
-                            },
-                          ),
-                          IconButton(
-                            icon: Icon(Icons.delete_rounded, color: Colors.redAccent),
-                            onPressed: () {
-                              int messageId = message.messageId;
-                              controller.deleteQuestion(messageId);
-                            },
-                          ),
-                        ],
+                  final message = controller.reportedMessages[index];
+                  return Dismissible(
+                    key: Key(message.messageId.toString()),
+                    onDismissed: (direction) {
+                      controller.updateMessageIsReported(message.messageId, false);
+                      controller.reportedMessages.removeAt(index);
+                    },
+                    background: Container(color: Colors.red),
+                    child: Card(
+                      margin: EdgeInsets.symmetric(vertical: 5),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      title: Text(message.question, style: TextStyle(fontWeight: FontWeight.bold)),
-                      subtitle: Padding(
-                        padding: const EdgeInsets.only(top: 5.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                      child: ListTile(
+                        trailing: Row(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
-                            Text('Cevap: ${message.answer}'),
-                            Text('Kategori: ${message.category}'),
-                            Text('User ID: ${message.userId}'),
+                            Obx(() => Checkbox(
+                              value: message.isChecked.value,
+                              onChanged: (bool? value) {
+                                message.isChecked.value = value!;
+                              },
+                            )),
+                            IconButton(
+                              icon: Icon(Icons.edit_rounded, color: Colors.redAccent),
+                              onPressed: () {
+                                _showEditQuestionDialog(
+                                  isEdit: true,
+                                  messageId: message.messageId,
+                                  initialQuestion: message.question,
+                                  initialAnswer: message.answer,
+                                  initialCategory: message.category,
+                                  reportMessage: message.reportMessage,
+                                );
+                              },
+                            ),
+                            IconButton(
+                              icon: Icon(Icons.delete_rounded, color: Colors.redAccent),
+                              onPressed: () {
+                                int messageId = message.messageId;
+                                controller.deleteQuestion(messageId);
+                              },
+                            ),
                           ],
+                        ),
+                        title: Text(message.question, style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Padding(
+                          padding: const EdgeInsets.only(top: 5.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Cevap: ${message.answer}'),
+                              Text('Kategori: ${message.category}'),
+                              Text('User ID: ${message.userId}'),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -248,6 +232,16 @@ class ManageQuestionsPage extends GetView<AdminController> {
           fontWeight: FontWeight.bold,
           color: Colors.blueAccent,
         ),
+      ),
+    );
+  }
+
+  Widget _buildTextField(TextEditingController controller, [TextInputType keyboardType = TextInputType.text]) {
+    return TextField(
+      controller: controller,
+      keyboardType: keyboardType,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
       ),
     );
   }

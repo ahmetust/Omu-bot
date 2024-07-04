@@ -1,19 +1,20 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-//import 'package:omu_bot/controllers/auth_controller.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:omu_bot/services/chat_service.dart';
 import 'package:omu_bot/models/chat/chat_massage.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
-import '../models/user/user.dart';
+
 
 
 
 class ChatController extends GetxController {
   final ChatService _chatService = ChatService();
-  late User? user;
+  final storage = GetStorage();
+  late dynamic user;
 
   var messages = <ChatMessage>[].obs;
   var isLoading = false.obs;
@@ -22,7 +23,7 @@ class ChatController extends GetxController {
   late TextEditingController chatTextController;
   late ScrollController scrollController;
   late stt.SpeechToText speech;
-  late  FlutterTts textToSpeech;
+  late FlutterTts textToSpeech;
 
   var isListening = false.obs;
 
@@ -35,6 +36,7 @@ class ChatController extends GetxController {
     scrollController = ScrollController();
     speech = stt.SpeechToText();
     textToSpeech = FlutterTts();
+    user = storage.read('user');
   }
 
   @override
@@ -45,42 +47,40 @@ class ChatController extends GetxController {
   }
 
   Future<void> sendQuestion(String question) async {
-    if(question.isNotEmpty){
+    if (question.isNotEmpty) {
       messages.add(ChatMessage(message: question, isSender: true));
       if (speech.isListening) {
         isListening.value = false;
         speech.stop();
       }
-
-    }
-    else{
+    } else {
       Get.showSnackbar(const GetSnackBar(
         title: "Mesaj Gönderilemedi",
         message: 'Mesaj kutusu boş',
-        duration: const Duration(seconds: 5),
+        duration: Duration(seconds: 5),
         isDismissible: true,
         backgroundColor: Colors.red,
-        dismissDirection: DismissDirection.horizontal, // Bu satırı ekleyin
-
+        dismissDirection: DismissDirection.horizontal,
       ));
     }
+
     chatTextController.clear();
     isLoading.value = true;
 
     try {
+      int userId = user['id'];
       Future.delayed(const Duration(milliseconds: 1500));
-      final response = await _chatService.sendQuestion(question);
-      if(response.isNotEmpty){
-        messages.add(ChatMessage(message: response, isSender: false));
+      final response = await _chatService.sendQuestion(question, userId);
+      if (response.message.isNotEmpty) {
+        messages.add(response);
       }
-
     } catch (e) {
       Get.showSnackbar(GetSnackBar(
         message: '$e',
         duration: const Duration(seconds: 3),
         isDismissible: true,
         backgroundColor: Colors.red,
-        dismissDirection: DismissDirection.vertical, // Bu satırı ekleyin
+        dismissDirection: DismissDirection.vertical,
       ));
     } finally {
       isLoading.value = false;
@@ -89,7 +89,6 @@ class ChatController extends GetxController {
     Future.delayed(Duration(milliseconds: 100), () {
       myScrollController();
     });
-
   }
 
   void myScrollController() {
@@ -100,7 +99,6 @@ class ChatController extends GetxController {
     );
   }
 
-
   Future<void> requestMicrophonePermission() async {
     var status = await Permission.microphone.status;
     if (!status.isGranted) {
@@ -110,6 +108,7 @@ class ChatController extends GetxController {
       }
     }
   }
+
   Future<void> startListening() async {
     requestMicrophonePermission();
     if (!isListening.value) {
@@ -134,13 +133,35 @@ class ChatController extends GetxController {
   Future<void> speakMessage(ChatMessage message) async {
     if (message.isSpeaking.value) {
       await textToSpeech.stop();
-
       message.isSpeaking.value = false;
     } else {
       await textToSpeech.speak(message.message);
       message.isSpeaking.value = true;
     }
 
-    textToSpeech.setCompletionHandler(() => message.isSpeaking.value = false,);
+    textToSpeech.setCompletionHandler(() => message.isSpeaking.value = false);
+  }
+
+  Future<void> reportMessage(int messageId, String reportMessage) async {
+    try {
+      await _chatService.reportMessage(messageId, reportMessage);
+      Get.showSnackbar(GetSnackBar(
+        message: 'Mesaj başarıyla rapor edildi',
+        duration: const Duration(seconds: 3),
+        isDismissible: true,
+        backgroundColor: Colors.green,
+        dismissDirection: DismissDirection.vertical,
+      ));
+    } catch (e) {
+      Get.showSnackbar(GetSnackBar(
+        message: 'Rapor gönderilemedi: $e',
+        duration: const Duration(seconds: 3),
+        isDismissible: true,
+        backgroundColor: Colors.red,
+        dismissDirection: DismissDirection.vertical,
+      ));
+    }
   }
 }
+
+

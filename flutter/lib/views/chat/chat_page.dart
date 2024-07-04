@@ -4,6 +4,7 @@ import 'package:omu_bot/controllers/chat_controller.dart';
 import 'package:omu_bot/widgets/app_bar.dart';
 import 'package:gradient_borders/gradient_borders.dart';
 import 'package:omu_bot/widgets/clickable_text.dart';
+import '../../models/chat/chat_massage.dart';
 import '../../widgets/progress_indicator.dart'; // TypingIndicator yerine kullanılan ilgili bileşeni ekleyin
 
 class ChatPage extends GetView<ChatController> {
@@ -163,7 +164,7 @@ class ChatPage extends GetView<ChatController> {
                             alignment: Alignment.centerLeft,
                             child: TextButton.icon(
                               onPressed: () {
-                                //controller.reportMessage(index);
+                                _showReportDialog(context, controller.messages[index]);
                               },
                               icon: Icon(Icons.report, color: Colors.red),
                               label: Text('Rapor Et', style: TextStyle(color: Colors.red)),
@@ -250,4 +251,111 @@ class ChatPage extends GetView<ChatController> {
       colors: colors,
     );
   }
+
+  void _showReportDialog(BuildContext context, ChatMessage message) {
+    final TextEditingController _reportController = TextEditingController();
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        return Dialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          elevation: 8,
+          backgroundColor: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  'Mesajı Rapor Et',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.redAccent,
+                  ),
+                ),
+                SizedBox(height: 20),
+                _buildInputLabel('Rapor Mesajı'),
+                _buildReportTextField(_reportController),
+                SizedBox(height: 20),
+                ButtonBar(
+                  alignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: 100,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 15),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          backgroundColor: Colors.grey,
+                        ),
+                        child: const Text('Vazgeç', style: TextStyle(color: Colors.white)),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 100,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          final reportMessage = _reportController.text;
+                          if (message.messageId != null) {
+                            controller.reportMessage(message.messageId!, reportMessage);
+                          } else {
+                            // Handle the case when messageId is null
+                            // Show an error message or handle it accordingly
+                            print("Message ID is null");
+                          }
+                          Navigator.of(context).pop();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(vertical: 15),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          backgroundColor: Colors.redAccent,
+                        ),
+                        child: const Text('Rapor Et', style: TextStyle(color: Colors.white)),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+
+  Widget _buildInputLabel(String label) {
+    return Text(
+      label,
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 16,
+        color: Colors.black,
+      ),
+    );
+  }
+
+  Widget _buildReportTextField(TextEditingController controller) {
+    return TextField(
+      controller: controller,
+      maxLines: 3,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        hintText: 'Geri bildiriminizi yazın',
+      ),
+    );
+  }
 }
+

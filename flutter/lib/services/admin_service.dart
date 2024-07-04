@@ -8,7 +8,8 @@ import '../models/admin/edit_question/edit_question_request.dart';
 import '../models/admin/edit_question/edit_question_response.dart';
 
 class AdminService {
-  final String baseUrl = 'http://192.168.16.237:3300';
+
+  final String baseUrl = 'http://34.89.5.66:5000';
 
   Future<List<MessageListRequestModel>> fetchMessages() async {
     final response = await http.get(Uri.parse('$baseUrl/list-messages'));
@@ -18,6 +19,17 @@ class AdminService {
       return jsonResponse.map((message) => MessageListRequestModel.fromJson(message)).toList();
     } else {
       throw Exception('Failed to load messages');
+    }
+  }
+
+  Future<List<MessageListRequestModel>> fetchReportedMessages() async {
+    final response = await http.get(Uri.parse('$baseUrl/list-reported-messages'));
+
+    if (response.statusCode == 200) {
+      List jsonResponse = jsonDecode(response.body);
+      return jsonResponse.map((message) => MessageListRequestModel.fromJson(message)).toList();
+    } else {
+      throw Exception('Failed to load reported messages');
     }
   }
 
@@ -60,6 +72,25 @@ class AdminService {
       throw Exception('Failed to delete question');
     }
   }
+
+  Future<void> updateMessageIsReported(int messageId, ) async {
+    final response = await http.post(
+      Uri.parse('$baseUrl/update-message-is-reported'),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      body: jsonEncode({
+        'messageId': messageId,
+        'isReported': 0,
+      }),
+    );
+
+    if (response.statusCode != 200) {
+      throw Exception('Failed to update message isReported status');
+    }
+  }
+
+
 
   Future<List<CategoryStatsModel>> getCategoryStats() async {
     final response = await http.get(Uri.parse('$baseUrl/category-stats'));

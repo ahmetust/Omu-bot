@@ -9,13 +9,14 @@ import '../services/admin_service.dart';
 
 class AdminController extends GetxController {
   var messages = <MessageListRequestModel>[].obs;
-  var filteredMessages = <MessageListRequestModel>[].obs; // Filtrelenmiş mesajlar
+  var filteredMessages = <MessageListRequestModel>[].obs; // Filtrelenmiş mesajlar eklendi
+  var reportedMessages = <MessageListRequestModel>[].obs;
   var isLoading = false.obs;
   var errorMessage = ''.obs;
-  var categoryStats = <CategoryStatsModel>[].obs;
+  var categoryStats = <CategoryStatsModel>[].obs; // Observable olarak tanımlandı
   var selectedPage = 'manage'.obs;
-  var selectedCategory = ''.obs; // Selected category name
-  var selectedCategoryId = 0.obs; // Selected category ID
+  var selectedCategory = ''.obs; // Seçilen kategori ismi
+  var selectedCategoryId = 0.obs; // Seçilen kategori ID'si
 
   final AdminService adminService = AdminService();
   final storage = GetStorage();
@@ -26,11 +27,25 @@ class AdminController extends GetxController {
     super.onInit();
     fetchMessages();
     fetchCategoryStats();
+    fetchReportedMessages();
     user = storage.read('user');
   }
 
   void setSelectedPage(String view) {
-    selectedPage.value = view;
+    selectedPage.value = view; // Sayfa değiştirme işlemi eklendi
+  }
+
+  void fetchReportedMessages() async {
+    isLoading.value = true;
+    try {
+      var fetchedReportedMessages = await adminService.fetchReportedMessages();
+      reportedMessages.assignAll(fetchedReportedMessages);
+
+    } catch (e) {
+      showErrorSnackbar(e.toString());
+    } finally {
+      isLoading.value = false;
+    }
   }
 
   void fetchMessages() async {
@@ -57,6 +72,7 @@ class AdminController extends GetxController {
       );
       await adminService.addQuestion(request);
       fetchMessages();
+      fetchCategoryStats(); // Kategori istatistiklerini güncelle
     } catch (e) {
       showErrorSnackbar(e.toString());
     } finally {
@@ -75,6 +91,8 @@ class AdminController extends GetxController {
       );
       await adminService.editQuestion(request);
       fetchMessages();
+      fetchCategoryStats(); // Kategori istatistiklerini güncelle
+      fetchReportedMessages();
     } catch (e) {
       showErrorSnackbar(e.toString());
     } finally {
@@ -87,6 +105,8 @@ class AdminController extends GetxController {
     try {
       await adminService.deleteQuestion(questionId);
       fetchMessages();
+      fetchCategoryStats(); // Kategori istatistiklerini güncelle
+      fetchReportedMessages();
     } catch (e) {
       showErrorSnackbar(e.toString());
     } finally {
@@ -116,6 +136,19 @@ class AdminController extends GetxController {
       filteredMessages.assignAll(filtered);
     }
   }
+
+  void updateMessageIsReported(int messageId, bool isReported) async {
+    isLoading.value = true;
+    try {
+      await adminService.updateMessageIsReported(messageId);
+      fetchReportedMessages(); // Raporlanan mesajları güncelle
+    } catch (e) {
+      showErrorSnackbar(e.toString());
+    } finally {
+      isLoading.value = false;
+    }
+  }
+
 
   void showErrorSnackbar(String message) {
     Get.snackbar(

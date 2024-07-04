@@ -6,7 +6,8 @@ import 'package:omu_bot/models/login/register_request_model.dart';
 import 'package:omu_bot/models/login/register_response_model.dart';
 
 class AuthService {
-  final String baseUrl = 'http://192.168.16.237:3300';
+  final String baseUrl = 'http://34.89.5.66:5000';
+
 
   Future<LoginResponse?> login(String email, String password) async {
     final response = await http.post(
