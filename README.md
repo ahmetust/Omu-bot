@@ -1,2 +1,0 @@
-# Omu-bot
-Omu-bot
