@@ -152,7 +152,7 @@ def soru_getir(alinan_soru):
     en_yakin_soru_indexi = benzerlikler.argsort(axis=1)[:, -1]
     en_yuksek_benzerlik_skuru = benzerlikler[0, en_yakin_soru_indexi[0]]
 
-        # Eğer benzerlik oranı %50'den düşükse, özel bir mesaj döndürün
+        # Eğer benzerlik oranı %40'den düşükse, özel bir mesaj döndürün
     if en_yuksek_benzerlik_skuru < 0.4:
         save_unanswered_question(alinan_soru)
         return "Şu anda bu soruya cevap veremiyorum."
