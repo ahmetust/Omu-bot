@@ -2,7 +2,7 @@
 import requests
 
 def get_exchange_rate():
-    api_key = "c75cc78306f96506ba59d1c3"
+    api_key = "your_api_key"
     base_currency = "USD"
     target_currency = "TRY"
     api_url = f"https://v6.exchangerate-api.com/v6/{api_key}/latest/{base_currency}"
