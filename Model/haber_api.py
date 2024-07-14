@@ -1,7 +1,7 @@
 import requests
 
 def get_samsun_news():
-    api_key = "45211011b89d4207a0b677b08e62f6a2"
+    api_key = "your_api_key"
     query = "Samsun"
     url = f"https://newsapi.org/v2/everything?q={query}&language=tr&apiKey={api_key}"
     
