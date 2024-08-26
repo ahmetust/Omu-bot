@@ -6,6 +6,12 @@ The model was trained using the mechanisms described above and the outputs were 
 
 ![Test](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot1.png)
 
+API services were used in the project so that the developed chat bot could respond more accurately to current information. Examples of these services include API services such as dollar exchange rate, weather forecast, and the university's current cafeteria menu.
+
+In addition, the Model can work both via web application and mobile devices, and in addition to these, it can also communicate with users via Telegram. In this way, users can access the model more easily.
+
+
+
 **[TR]**
 **Merhaba, ben OMU-BOT** 
 
@@ -13,3 +19,10 @@ OMU-BOT, Ondokuz Mayıs Üniversitesi için oluşturulan bir soru cevaplama chat
 
 Yukarıda anlatılan mekanizmalar kullanılarak model eğitimi yapılmış ve çıktılar elde edilmiştir. Model yaklaşık 1000 soru ile 3 epoch boyunca eğitilmiştir. 3 epoch sonucunda 0.98 model doğruluğu elde edilmiştir. Ardından model test kümesinde bulunan veriler ile test edilmiştir. Modelin tahmin ettiği ve gerçek cevaplar aşağıda verilmiştir.
 ![Test](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot1.png)
+
+
+Geliştirilmiş olan sohbet botunun güncel bilgilere daha doğru cevap verebilmesi için projede API servislerinden yararlanılmıştır. Bu servislere dolar kuru, hava durumu ve üniversitenin güncel yemekhane menüsü gibi API servisleri örnek olarak verilebilir.
+
+
+Ayrıca Model hem web uygulaması üzerinden hem de mobil cihazlar üzerinden çalışabildiği gibi bunlara ek olarak telegram üzerinden de kullanıcılar ile iletişime geçebilmektedir. Bu sayede kullanıcıların modele daha kolay ulaşması sağlanmıştır.
+
