@@ -10,6 +10,9 @@ API services were used in the project so that the developed chat bot could respo
 
 In addition, the Model can work both via web application and mobile devices, and in addition to these, it can also communicate with users via Telegram. In this way, users can access the model more easily.
 
+![Telegram chat](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot2.png)
+
+
 
 
 **[TR]**
@@ -25,4 +28,9 @@ Geliştirilmiş olan sohbet botunun güncel bilgilere daha doğru cevap verebilm
 
 
 Ayrıca Model hem web uygulaması üzerinden hem de mobil cihazlar üzerinden çalışabildiği gibi bunlara ek olarak telegram üzerinden de kullanıcılar ile iletişime geçebilmektedir. Bu sayede kullanıcıların modele daha kolay ulaşması sağlanmıştır.
+
+![Telegram sohbeti](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot2.png)
+
+
+
 
