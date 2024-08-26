@@ -27,6 +27,11 @@ Finally, a diagram that summarizes the Project in general is given below.
 
 ![Summary](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot3.JPG)
 
+
+Project owners: AHMET USTA - FURKAN EMRE DEMİREL - KEREM VAHAPOĞLU
+
+
+
 **[TR]**
 **Merhaba, ben OMU-BOT** 
 
@@ -56,3 +61,6 @@ Son olarak Projeyi genel olarak özetleyen bir şema aşağıda verilmiştir.
 
 
 ![Genel Şema](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot3.JPG)
+
+
+Projeyi gerçekleştirenler: AHMET USTA - FURKAN EMRE DEMİREL - KEREM VAHAPOĞLU
