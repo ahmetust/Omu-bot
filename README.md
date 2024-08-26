@@ -9,7 +9,7 @@ The model was trained using the mechanisms described above and the outputs were 
 
 Since the model answers the question entered by the user by matching it with the closest question in the dataset, a similarity rate is created between the question received from the user and all the data. As a result, the model gives the answer to the question with the highest similarity rate as output to the user. However, if the question entered by the user is not similar to any of the questions in the dataset (if the similarity rate of all questions is less than 30%), the model produces an answer such as I cannot answer this question at the moment and saves the question to be answered later.
 
-![](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot4.png)
+![Unanswered questions](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot4.png)
 
 API services were used in the project so that the developed chat bot could respond more accurately to current information. Examples of these services include API services such as dollar exchange rate, weather forecast, and the university's current cafeteria menu.
 
@@ -18,7 +18,14 @@ In addition, the Model can work both via web application and mobile devices, and
 ![Telegram chat](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot2.png)
 
 
+The web and mobile application interfaces of the model are made via Flutter and the question-answer screen is as follows.
 
+![Interface](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot5.png)
+
+
+Finally, a diagram that summarizes the Project in general is given below.
+
+![Summary](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot3.JPG)
 
 **[TR]**
 **Merhaba, ben OMU-BOT** 
@@ -30,7 +37,7 @@ Yukarıda anlatılan mekanizmalar kullanılarak model eğitimi yapılmış ve ç
 
 Model kullanıcıların girdiği soruyu veri setindeki en yakın soru ile eşleştirip cevap verdiği için kullanıcıdan alınan soru ile tüm veriler arasında bir benzerlik oranı oluşturulur. Sonuç olarak en fazla benzerlik oranının olduğu sorunun cevabını model kullanıcıya çıktı olarak verir. Fakat kullanıcının girdiği soru veri setindeki soruların hiçbirine benzemiyorsa (tüm soruların benzerlik oranı %30 dan az ise) model şu anda bu soruya cevap veremiyorum gibi bir yanıt üretir ve soruyu daha sonra cevaplanmak üzere kayıt eder.
 
-![](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot4.png)
+![Cevaplanamayan Sorular](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot4.png)
 
 Geliştirilmiş olan sohbet botunun güncel bilgilere daha doğru cevap verebilmesi için projede API servislerinden yararlanılmıştır. Bu servislere dolar kuru, hava durumu ve üniversitenin güncel yemekhane menüsü gibi API servisleri örnek olarak verilebilir.
 
@@ -40,7 +47,12 @@ Ayrıca Model hem web uygulaması üzerinden hem de mobil cihazlar üzerinden ç
 ![Telegram sohbeti](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot2.png)
 
 
+Modelin web ve mobil uygulama arayüzleri flutter üzerinden yapılmış olup soru-cevap ekranı aşağıdaki gibidir.
+
+![Arayüz](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot5.png)
 
 
+Son olarak Projeyi genel olarak özetleyen bir şema aşağıda verilmiştir.
 
 
+![Genel Şema](https://github.com/ahmetust/Omu-bot/blob/main/Screenshot3.JPG)
